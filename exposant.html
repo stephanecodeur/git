@@ -10,11 +10,12 @@
 </head>
 <body class="bg-white">
     <!-- Navbar -->
-    <header class="bg-black text-white py-4 flex justify-center items-center space-x-4">
+    <header class="bg-black text-white py-4 flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-4">
         <button class="bg-red-600 py-2 px-4 text-sm font-bold">INSCRIPTION EXPOSANTS</button>
         <button class="bg-transparent py-2 px-4 text-sm font-bold border-2 border-white">CONNECTEZ-VOUS AU SALON VIRTUEL SI-2024</button>
         <button class="bg-red-600 py-2 px-4 text-sm font-bold">INSCRIPTION VISITEURS</button>
     </header>
+    
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8">
@@ -23,125 +24,111 @@
             <h1 class="text-orange-500 text-4xl font-bold uppercase">Les 4 temps forts du SI-2024</h1>
         </section>
 
-        <!-- Content Section -->
-        <section class="flex justify-between">
-            <!-- Left Section -->
-            <div class="w-2/3 pr-4">
-                <!-- Fused Card -->
-                <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
-                    <!-- First part of the card (Forum) -->
-                    <div class="flex items-start py-4">
-                        <div class="text-red-600 text-4xl mr-4">
-                            <!-- Icon -->
-                            <i class="fas fa-chalkboard-teacher"></i>
-                        </div>
-                        <div class="flex flex-col items-center text-center" >
-                            <img src="images/icone fro.webp" alt="" class="w-15 h-10 object-cover  rounded-md text-center">
-                            <h2 class="font-bold text-lg mb-2">Forum des Opportunités <br> d’Investissement (Jour 1)</h2>
-                            <p class="text-gray-700 text-sm justify-content">
-                                Cérémonie d’ouverture officielle, diffusée en direct • Conférence plénière : "La Côte d’Ivoire, terre d’opportunités pour les investisseurs" • Présentation des réformes et initiatives gouvernementales favorisant l’investissement...
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Divider -->
-                    <hr class="my-4 border-t border-gray-300">
-
-                    <!-- Second part of the card (Symposium) -->
-                    <div class="flex items-start py-4">
-                        <div class="text-red-600 text-4xl mr-4">
-                            <!-- Icon -->
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <div class="flex flex-col items-center text-center">
-                            <img src="images/icon sym.webp" alt="" class="w-15 h-10 object-cover rounded-md">
-                            <h2 class="font-bold text-lg mb-2">Symposium sur le Financement et la <br> Structuration des Entreprises (Jour 1 après-midi)</h2>
-                            <p class="text-gray-700 text-sm">
-                                Panel d’experts sur les sources de financement innovantes • Présentation des programmes de soutien et d’accompagnement pour start-ups et PME • Ateliers thématiques explorant l'économie verte et numérique...
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start py-4">
-                        <div class="text-red-600 text-4xl mr-4">
-                            <!-- Icon -->
-                            <i class="fas fa-handshake"></i>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center">
-                            <img src="images/icon journ.webp" alt="" class="w-15 h-10 object-cover rounded-md">
-                            <h2 class="font-bold text-lg mb-2 ">Journée de l'Inclusion et de <br> l'Autonomisation (Jour 2 matin) <br> • Table</h2>
-                            <p class="text-gray-700 text-sm">
-                                Journée de l'Inclusion et de l'Autonomisation (Jour 2 matin) • Table ronde sur les stratégies d'autonomisation économique des femmes et des jeunes • Présentation des programmes, sources et conditions d'accompagnement et de financement de projets • Témoignages inspirants d'entrepreneurs ayant réussi • Ateliers pratiques sur l'inclusion financière et l'accès aux financements • Sessions de mentorat et coaching personnalisées, en présentiel et en ligne
-                            </p>
-                        </div>
-
-
-
-                        
-                    </div>
-
-                    <div class="flex items-start py-4">
-                        <div class="text-red-600 text-4xl mr-4">
-                            <!-- Icon -->
-                            <i class="fas fa-handshake"></i>
-                        </div>
-
-                        <div class="flex flex-col items-center text-center">
-                            <img src="images/dernier icon.webp" alt="" class="w-15 h-10 object-cover rounded-md">
-                            <h2 class="font-bold text-lg mb-2">Clôture et Perspectives <br> d'Avenir (Jour 2 après-midi) </h2>
-                            <p class="text-gray-700 text-sm">
-                                Synthèse des discussions clés et présentation des opportunités identifiées • Cérémonie de signature de contrats et d'accords d'investissement • Remise de prix aux projets les plus innovants et prometteurs • Séance de clôture avec annonce des initiatives de suivi post-événement
-                            </p>
-                        </div>
-
-
-
-                        
-                    </div>
-
-
-                    
+       <!-- Content Section -->
+<section class="flex flex-col lg:flex-row justify-between">
+    <!-- Left Section -->
+    <div class="lg:w-2/3 lg:pr-4 mb-8 lg:mb-0">
+        <!-- Fused Card -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+            <!-- First part of the card (Forum) -->
+            <div class="flex flex-col lg:flex-row items-start py-4">
+                <div class="text-red-600 text-4xl mb-4 lg:mb-0 lg:mr-4">
+                    <!-- Icon -->
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/icone fro.webp" alt="" class="w-15 h-10 object-cover rounded-md mb-4 lg:mb-0">
+                    <h2 class="font-bold text-lg mb-2">Forum des Opportunités <br> d’Investissement (Jour 1)</h2>
+                    <p class="text-gray-700 text-sm">
+                        Cérémonie d’ouverture officielle, diffusée en direct • Conférence plénière : "La Côte d’Ivoire, terre d’opportunités pour les investisseurs" • Présentation des réformes et initiatives gouvernementales favorisant l’investissement...
+                    </p>
                 </div>
             </div>
 
-            <!-- Right Section -->
-            <aside class="w-1/3 bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-                <h3 class="text-red-600 text-lg font-bold border-b border-red-600 pb-2">Informations Pratiques</h3>
-                <p class="py-2"><strong>Lieu :</strong> JECKAD ESPACE ÉVÉNEMENTIEL</p>
-                <p class="py-2"><strong>Date :</strong> Jeudi 26 au Vendredi 27 Septembre 2024</p>
-                <p class="py-2"><strong>Horaires d’ouverture :</strong> à partir de 07h30 - 18h30</p>
-                <p class="py-2"><strong>Conditions d’accès :</strong> Gratuit sur inscription...</p>
-                <p class="py-2"><strong>Accès au badge :</strong> Sur place à l’accueil...</p>
-                <p class="py-2"><strong>Localisation :</strong> <a href="#" class="text-blue-400 underline">Google map</a></p>
-                <p class="py-2"><strong>Info line :</strong> +225 01 50 82 88 88</p>
-                <button class="bg-red-600 py-2 px-4 text-white mt-4">Contactez-nous</button>
-            </aside>
-        </section>
+            <!-- Divider -->
+            <hr class="my-4 border-t border-gray-300">
+
+            <!-- Second part of the card (Symposium) -->
+            <div class="flex flex-col lg:flex-row items-start py-4">
+                <div class="text-red-600 text-4xl mb-4 lg:mb-0 lg:mr-4">
+                    <!-- Icon -->
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/icon sym.webp" alt="" class="w-15 h-10 object-cover rounded-md mb-4 lg:mb-0">
+                    <h2 class="font-bold text-lg mb-2">Symposium sur le Financement et la <br> Structuration des Entreprises (Jour 1 après-midi)</h2>
+                    <p class="text-gray-700 text-sm">
+                        Panel d’experts sur les sources de financement innovantes • Présentation des programmes de soutien et d’accompagnement pour start-ups et PME • Ateliers thématiques explorant l'économie verte et numérique...
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-start py-4">
+                <div class="text-red-600 text-4xl mb-4 lg:mb-0 lg:mr-4">
+                    <!-- Icon -->
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/icon journ.webp" alt="" class="w-15 h-10 object-cover rounded-md mb-4 lg:mb-0">
+                    <h2 class="font-bold text-lg mb-2">Journée de l'Inclusion et de <br> l'Autonomisation (Jour 2 matin) <br> • Table</h2>
+                    <p class="text-gray-700 text-sm">
+                        Journée de l'Inclusion et de l'Autonomisation (Jour 2 matin) • Table ronde sur les stratégies d'autonomisation économique des femmes et des jeunes • Présentation des programmes, sources et conditions d'accompagnement et de financement de projets • Témoignages inspirants d'entrepreneurs ayant réussi • Ateliers pratiques sur l'inclusion financière et l'accès aux financements • Sessions de mentorat et coaching personnalisées, en présentiel et en ligne
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-start py-4">
+                <div class="text-red-600 text-4xl mb-4 lg:mb-0 lg:mr-4">
+                    <!-- Icon -->
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <img src="images/dernier icon.webp" alt="" class="w-15 h-10 object-cover rounded-md mb-4 lg:mb-0">
+                    <h2 class="font-bold text-lg mb-2">Clôture et Perspectives <br> d'Avenir (Jour 2 après-midi) </h2>
+                    <p class="text-gray-700 text-sm">
+                        Synthèse des discussions clés et présentation des opportunités identifiées • Cérémonie de signature de contrats et d'accords d'investissement • Remise de prix aux projets les plus innovants et prometteurs • Séance de clôture avec annonce des initiatives de suivi post-événement
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <aside class="lg:w-1/3 bg-gray-800 text-white p-4 rounded-lg shadow-lg">
+        <h3 class="text-red-600 text-lg font-bold border-b border-red-600 pb-2">Informations Pratiques</h3>
+        <p class="py-2"><strong>Lieu :</strong> JECKAD ESPACE ÉVÉNEMENTIEL</p>
+        <p class="py-2"><strong>Date :</strong> Jeudi 26 au Vendredi 27 Septembre 2024</p>
+        <p class="py-2"><strong>Horaires d’ouverture :</strong> à partir de 07h30 - 18h30</p>
+        <p class="py-2"><strong>Conditions d’accès :</strong> Gratuit sur inscription...</p>
+        <p class="py-2"><strong>Accès au badge :</strong> Sur place à l’accueil...</p>
+        <p class="py-2"><strong>Localisation :</strong> <a href="#" class="text-blue-400 underline">Google map</a></p>
+        <p class="py-2"><strong>Info line :</strong> +225 01 50 82 88 88</p>
+        <button class="bg-red-600 py-2 px-4 text-white mt-4">Contactez-nous</button>
+    </aside>
+</section>
 
 
-
-    <section class="bg-gray-100 py-12">
+<section class="bg-gray-100 py-12">
     <div class="container mx-auto">
         <!-- Carte contenant l'image et le texte principal -->
         <div class="bg-white p-6 border border-gray-100 rounded-lg shadow-md mb-12">
             <!-- Flexbox pour aligner l'image et le texte -->
             <div class="flex flex-col items-center text-center">
                 <!-- Image centrée et réduite -->
-                <div class="w-60 h-auto mb-8">
+                <div class="w-60 h-auto mb-6 lg:mb-4">
                     <img src="images/JEAN-LUC-KONAN-PDG-GROUPE-COFINA-1536x1536.png" alt="Image illustrative" class="rounded-lg shadow-md w-full">
                 </div>
-        
+                
                 <!-- Texte en bas de l'image -->
-                <div class="w-full lg:w-1/2 lg:pl-8 mt-6 lg:mt-0">
-                    <h2 class="text-red-600 font-bold text-xl">Les bonnes raisons d'être au SI-2024 en tant que :</h2>
-                    <h3 class="text-2xl font-bold">Exposant, Sponsor, Partenaire, Visiteur ou Intervenant</h3>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-red-600 font-bold text-xl text-center lg:text-left">Les bonnes raisons d'être au SI-2024 en tant que :</h2>
+                    <h3 class="text-2xl font-bold text-center lg:text-left">Exposant, Sponsor, Partenaire, Visiteur ou Intervenant</h3>
                 </div>
             </div>
-        
+        </div>
         
         <!-- Flexbox pour les cartes -->
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Carte 1 : Pour les Exposants -->
             <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-md">
                 <h4 class="text-red-600 font-bold text-lg">01. Pour les Exposants :</h4>
@@ -173,7 +160,7 @@
             </div>
 
             <!-- Carte 4 : Pour les Visiteurs -->
-            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-md col-span-2 lg:col-span-1">
+            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-md">
                 <h4 class="text-red-600 font-bold text-lg">04. Pour les Visiteurs :</h4>
                 <p class="text-gray-700 mt-4">
                     • Expérience immersive à 360° : Plongez dans l'écosystème d'investissement local et international.<br>
@@ -183,7 +170,7 @@
             </div>
 
             <!-- Carte 5 : Pour les Intervenants -->
-            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-md col-span-2 lg:col-span-1">
+            <div class="bg-white p-6 border border-gray-300 rounded-lg shadow-md">
                 <h4 class="text-red-600 font-bold text-lg">05. Pour les Intervenants :</h4>
                 <p class="text-gray-700 mt-4">
                     • Partagez votre expertise avec un public élargi, combinant participants sur site et en ligne.<br>
@@ -193,9 +180,8 @@
             </div>
         </div>
     </div>
-    </div>
-
 </section>
+
 
     <section>
 

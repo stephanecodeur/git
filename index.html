@@ -21,6 +21,7 @@
         .navbar {
             z-index: 10;
             transition: background-color 0.8s; /* Animation de la transition */
+            
         }
         /* Navbar normale */
         .navbar-default {
@@ -75,68 +76,66 @@
 
     </style>
 </head>
-<body>
-    <header class="relative">
-        <!-- Navbar -->
-        <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
-            <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
-                <a href="#" class="text-2xl font-bold logo">MARCHE DE L'ESTHÉTIQUE <span class="text-orange-600">ET DE LA BEAUTÉ</span></a>
-                <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-                <div class="hidden md:flex flex-1 justify-center space-x-4">
-                    <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
-                    <a href="#Intervenant" class="hover:text-orange-700 text-xl font-bold">Intervenant</a>
-                    <a href="#Reservation" class="hover:text-orange-700 text-xl font-bold">Reservation</a>
-                    <a href="#Programme" class="hover:text-orange-700 text-xl font-bold">Programme</a>
-                    <a href="exposant.html" class="hover:text-orange-700 text-xl font-bold">EXPOSANTS</a>
-                    <a href="#contact" class="hover:text-orange-700 text-xl font-bold">Contact</a>
-                </div>
-            </div>
-        </nav>
-        
-        <!-- Image de Fond (Slider) -->
-        <div class="relative">
-            <div id="slider" class="relative w-full h-[800px] overflow-hidden">
-                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.38\ \(8\).jpeg');"></div>
-                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/slide.jpeg');"></div>
-                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.39\ \(4\).jpeg');"></div>
-            </div>
-    
-            <!-- Overlay et contenu -->
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6">
-                <h1 class="text-4xl text-white font-bold">Programme du Marché de l'Esthétique et de la Beauté</h1>
-                
-                <!-- Texte et boutons sous le texte -->
-                <p class=" font-bold text-2xl text-orange-600">Du 20 au 22 décembre 2024</p>
-    
-                <div class="flex space-x-4">
-                    <a href="#" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300">
-                      BADGE
-                    </a>
-                    <a href="#" class="bg-black hover:bg-orange-600 active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300">
-                       ACCREDITATION
-                    </a>
-                </div>
+<bo<header class="relative">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
+        <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
+            <a href="#"><img src="images/logo.jpeg" alt="" srcset=""class="w-24 h-auto"></a>
+            <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex flex-1 justify-center space-x-4">
+                <a href="#Apropos" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">Apropos</a>
+                <a href="#Intervenant" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">Intervenant</a>
+                <a href="#Reservation" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">Reservation</a>
+                <a href="#Programme" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">Programme</a>
+                <a href="exposant.html" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
+                <a href="#contact" class="text-white  hover:text-orange-700  text-lg md:text-xl font-bold">Contact</a>
             </div>
         </div>
-    </header>
+    </nav>
     
-    
-    
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-opacity-50 bg-gray-800 text-white p-4 hidden">
-        <div class="flex flex-col space-y-4 text-center">
-            <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
-            <a href="#Intervenant" class="hover:text-orange-700 text-xl font-bold">Intervenant</a>
-            <a href="#Reservation" class="hover:text-orange-700 text-xl font-bold">Reservation</a>
-            <a href="#Programme" class="hover:text-orange-700 text-xl font-bold">Programme</a>
-            <a href="#contact" class="hover:text-orange-700 text-xl font-bold">Contact</a>
+    <!-- Image de Fond (Slider) -->
+    <div class="relative">
+        <div id="slider" class="relative w-full h-[400px] md:h-[800px] overflow-hidden">
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/SLIDE1.jpeg');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/slide.jpeg');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
+        </div>
+
+        <!-- Overlay et contenu -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6 p-4 md:p-0">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center">Programme du Marché de l'Esthétique et de la Beauté</h1>
+            
+            <!-- Texte et boutons sous le texte -->
+            <p class="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 text-center">Du 20 au 22 décembre 2024</p>
+
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                    BADGE
+                </a>
+                <a href="#" class="bg-black hover:bg-orange-600 active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                    ACCREDITATION
+                </a>
+            </div>
         </div>
     </div>
-    
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-opacity-50 bg-gray-800 text-white p-4 hidden">
+    <div class="flex flex-col space-y-4 text-center">
+        <a href="#Apropos" class="text-orange-700   hover:text-white text-lg font-bold">Apropos</a>
+        <a href="#Intervenant" class="text-orange-700   hover:text-white text-lg font-bold">Intervenant</a>
+        <a href="#Reservation" class="text-orange-700   hover:text-white text-lg font-bold">Reservation</a>
+        <a href="#Programme" class="text-orange-700   hover:text-white text-lg font-bold">Programme</a>
+        <a href="exposant.html" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
+        <a href="#contact" class="text-white  hover:text-orange-700 text-lg font-bold">Contact</a>
+    </div>
+</div>
+
     
     
   
@@ -313,17 +312,19 @@
         <main class="container mx-auto py-8 px-4">
             <!-- Section A propos + Boutons -->
              <section id="Programme">
-                <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-xl font-bold text-orange-500">À propos du SEIP<br><span class="text-xl font-bold text-blue-900">Programme</span></h2>
-                    <div class="flex">
-                      <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold hover:black bg-orange-500 mr-2 active" onclick="openTab(event, 'jour1', 'tab1')">Jour 1 <br>  20 décembre 2024 </button>
-      
-      
-                      <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold  bg-blue-800" onclick="openTab(event, 'jour2', 'tab2')">Jour 2 <br>21 décembre 2024 </button>
-
-                      <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold  bg-blue-800" onclick="openTab(event, 'jour3', 'tab3')">Jour 3 <br>22 décembre 2024</button>
+                <div class=" mb-4">
+                    <div class="p-4">
+                        <h2 class="text-xl font-bold text-orange-500 mb-4">
+                            À propos du MEB<br>
+                            <span class="text-xl font-bold text-blue-900">Programme</span>
+                        </h2>
+                        <div class="flex flex-wrap justify-center space-x-2">
+                            <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold hover:bg-black bg-orange-500 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour1', 'tab1')">Jour 1 <br> 20 décembre 2024 </button>
+                            <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour2', 'tab2')">Jour 2 <br> 21 décembre 2024 </button>
+                            <button id="tab3" class="tablink-jour3 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour3', 'tab3')">Jour 3 <br> 22 décembre 2024</button>
+                        </div>
                     </div>
-                  </div>
+                    
              
            
         
@@ -934,5 +935,8 @@
     }
 
     setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
+
+
+    
 </script>
 
