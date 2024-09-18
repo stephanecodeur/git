@@ -37,7 +37,7 @@
         }
         /* Ajustements pour l'image de fond */
         .hero-image {
-            height: 100vh; /* Ajustez la hauteur selon vos besoins */
+            height: 200vh; /* Ajustez la hauteur selon vos besoins */
             background-size: cover; /* Couvre toute la section */
             background-position: center; /* Centre l'image */
             display: flex; /* Utiliser flexbox pour centrer le contenu */
@@ -87,32 +87,41 @@
                     </svg>
                 </button>
                 <div class="hidden md:flex flex-1 justify-center space-x-4">  
-                    <a href="#Apropos" class="hover:text-orange-700 text-2xl font-bold">Apropos</a>
-                    <a href="#Intervenant" class="hover:text-orange-700 text-2xl font-bold">Intervenant</a>
-                    <a href="#Reservation" class="hover:text-orange-700 text-2xl font-bold">Reservation</a>
-                    <a href="#Programme" class="hover:text-orange-700 text-2xl font-bold">Programme</a>
-                    <a href="#contact" class="hover:text-orange-700 text-2xl font-bold">Contact</a>
+                    <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
+                    <a href="#Intervenant" class="hover:text-orange-700 text-xl font-bold">Intervenant</a>
+                    <a href="#Reservation" class="hover:text-orange-700 text-xl font-bold">Reservation</a>
+                    <a href="#Programme" class="hover:text-orange-700 text-xl font-bold">Programme</a>
+                    <a href=" exposant.html" class="hover:text-orange-700 text-xl font-bold"> exposant</a>
+                    <a href="#contact" class="hover:text-orange-700 text-xl font-bold">Contact</a>
                 </div>
             </div>
         </nav>
         
-        <!-- Image de Fond -->
-        <div class="relative hero-image bg-cover bg-center " style="background-image: url('images/WhatsApp Image 2024-09-16 at 17.35.13.jpeg');">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
+        <!-- Image de Fond (Slider) -->
+        <div class="relative">
+            <div id="slider" class="relative w-full h-[800px] overflow-hidden">
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.38\ \(8\).jpeg');"></div>
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/mon.jpeg');"></div>
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.39\ \(4\).jpeg');"></div>
+            </div>
+    
+            <!-- Overlay et contenu -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                 <h1 class="text-4xl text-white font-bold">Titre de votre site</h1>
             </div>
         </div>
     </header>
     
+    
+    
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-opacity-50 bg-gray-800 text-white p-4 hidden">
         <div class="hidden md:flex flex-1 justify-center space-x-4">
-            <a href="#Apropos" class="hover:text-orange-700 text-2xl font-bold">Apropos</a>
-                    <a href="#Intervenant" class="hover:text-orange-700 text-2xl font-bold">Intervenant</a>
-                    <a href="#Reservation" class="hover:text-orange-700 text-2xl font-bold">Reservation</a>
-                    <a href="#Programme" class="hover:text-orange-700 text-2xl font-bold">Programme</a>
-                    <a href="#contact" class="hover:text-orange-700 text-2xl font-bold">Contact</a>
+            <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
+                    <a href="#Intervenant" class="hover:text-orange-700 text-xl  font-bold">Intervenant</a>
+                    <a href="#Reservation" class="hover:text-orange-700 text-xl  font-bold">Reservation</a>
+                    <a href="#Programme" class="hover:text-orange-700 text-xl  font-bold">Programme</a>
+                    <a href="#contact" class="hover:text-orange-700 text-xl  font-bold">Contact</a>
         </div>
     </div>
     
@@ -123,16 +132,16 @@
             <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <!-- Texte -->
                 <div>
-                    <h2 class="text-red-600 text-lg font-semibold mb-2">À propos du SEIP</h2>
-                    <h1 class="text-4xl font-bold mb-4">Bienvenue au Salon de l'Épargne, de l'Investissement et du Patrimoine</h1>
+                    <h2 class="text-red-600 text-lg font-semibold mb-2">À propos du Marché de l'Esthétique et de la Beauté</h2>
+                    <h1 class="text-4xl font-bold mb-4">Bienvenue au Marché de l'Esthétique et de la Beauté</h1>
                     <p class="text-gray-700 leading-relaxed mb-6">
-                        Le Salon de l’Épargne, de l'Investissement et du Patrimoine est le 1er rendez-vous annuel incontournable de l’éducation financière en Côte d’Ivoire, engagé auprès des populations et qui réunit durant quelques jours, l’ensemble des acteurs du monde de la finance.
+                        Le Marché de l'Esthétique et de la Beauté est un événement annuel incontournable qui célèbre l'univers de la beauté, du bien-être et de l'esthétique en Côte d'Ivoire. Prévu pour se tenir du 20 au 22 décembre 2024 à l'Espace CEFCA, à Cocody, cet événement vise à rassembler les professionnels, les marques, et les passionnés du secteur pour trois jours de découvertes, d'innovations et de rencontres.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-6">
-                        Il sert de lieu de formation, d’échanges et de solutions sur divers aspects liés à l’épargne et aux investissements. Il prépare un état des lieux, invite à la réflexion et apporte des éclairages sur les tendances du moment.
+                        Le salon offre une plateforme unique où se croisent les dernières tendances, les produits innovants et les services spécialisés dans les domaines de la cosmétique, des soins de beauté, de l'esthétique, de la coiffure, du maquillage et du bien-être. C'est l'occasion idéale pour les visiteurs de découvrir les nouvelles tendances, de participer à des ateliers, et d’échanger avec des experts du secteur.
                     </p>
                     <p class="text-gray-700 leading-relaxed mb-6">
-                        Pour sa 7ème édition, le SEIP revient pendant 48 heures dans une version hybride, alliant digital et présentiel. L’événement permet aux professionnels de la finance de se rencontrer et aux épargnants de découvrir des offres adaptées à leurs besoins.
+                        Organisé par Newscom Africa, une agence de communication et événementiel réputée, le Marché de l'Esthétique et de la Beauté s'inscrit comme un événement de référence pour tous les acteurs de l'industrie. Que vous soyez un professionnel cherchant à élargir votre réseau ou un amateur passionné, cet événement vous offre une opportunité unique de découvrir et d'expérimenter l'excellence dans le domaine de la beauté et du bien-être.
                     </p>
                     <!-- Bouton -->
                     <a href="#"
@@ -233,7 +242,7 @@
                     Pour devenir Partenaire / Sponsor, veuillez contacter l'équipe commerciale.
                 </p>
                 <p class="mb-2">
-                    <strong>Téléphone :</strong> 27 22 46 62 72 / 07 71 66 66 51
+                    <strong>Téléphone :</strong> +225 07 87 83 31 04 / +225 07 87 83 31 04
                 </p>
                 <p class="mb-2">
                     <strong>Email :</strong> fanta@lagence.ci
@@ -295,10 +304,12 @@
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-xl font-bold text-orange-500">À propos du SEIP<br><span class="text-xl font-bold text-blue-900">Programme</span></h2>
                     <div class="flex">
-                      <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold hover:black bg-orange-500 mr-2 active" onclick="openTab(event, 'jour1', 'tab1')">Jour 1 <br>13 Novembre 2024</button>
+                      <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold hover:black bg-orange-500 mr-2 active" onclick="openTab(event, 'jour1', 'tab1')">Jour 1 <br>  20 décembre 2024 </button>
       
       
-                      <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold  bg-blue-800" onclick="openTab(event, 'jour2', 'tab2')">Jour 2 <br>14 Novembre 2024</button>
+                      <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold  bg-blue-800" onclick="openTab(event, 'jour2', 'tab2')">Jour 2 <br>21 décembre 2024 </button>
+
+                      <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-xl font-bold  bg-blue-800" onclick="openTab(event, 'jour3', 'tab3')">Jour 3 <br>22 décembre 2024</button>
                     </div>
                   </div>
              
@@ -316,9 +327,9 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                             </svg>
-                            <span class="text-lg font-medium">07:00 - 09:00</span>
+                            <span class="text-lg font-medium">08h00 – 09h30</span>
                         </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Accueil et installation des invités</p>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Accueil des participants et inscription</p>
                         <span class="text-lg text-center">Modérateur / Modératrice</span>
                     </div>
                 </div>
@@ -333,9 +344,9 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                             </svg>
-                            <span class="text-lg font-medium">09:00 - 09:45</span>
+                            <span class="text-lg font-medium">09h30 – 10h00</span>
                         </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Campus 3 / Conseil de pros 3</p>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Cérémonie d’ouverture officielle</p>
                         <span class="text-lg text-center">Modérateur / Modératrice</span>
                     </div>
                 </div>
@@ -351,9 +362,9 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                 </svg>
-                <span class="text-lg font-medium">10:00 - 11:00</span>
+                <span class="text-lg font-medium">10h00 – 12h00 </span>
             </div>
-            <p class="text-gray-700 text-3xl font-bold mb-2">Panel 3</p>
+            <p class="text-gray-700 text-3xl font-bold mb-2">Conférence inaugurale</p>
             <span class="text-lg text-center">Modérateur / Modératrice</span>
         </div>
     </div>
@@ -367,17 +378,14 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                 </svg>
-                <span class="text-lg font-medium">11:05 - 11:15</span>
+                <span class="text-lg font-medium">12h00 – 13h00 </span>
             </div>
-            <p class="text-gray-700 text-3xl font-bold mb-2">Keynote Speech</p>
+            <p class="text-gray-700 text-3xl font-bold mb-2"> Visite des stands et des exposants</p>
             <span class="text-lg text-center">Modérateur / Modératrice</span>
         </div>
     </div>
 </div>
-
-
-
-              <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
                 <div class="flex items-start space-x-4">
                     <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
                     <div class="flex-1">
@@ -385,9 +393,84 @@
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                             </svg>
-                            <span class="text-lg font-medium">11:15 - 12:20</span>
+                            <span class="text-lg font-medium">13h00 – 14h00</span>
                         </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Panel 4</p>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner</p>
+                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                    </div>
+                </div>
+            </div>
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                <div class="flex items-start space-x-4">
+                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                            </svg>
+                            <span class="text-lg font-medium">14h00 – 15h30</span>
+                        </div>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Atelier pratique</p>
+                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                    </div>
+                </div>
+            </div>
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                <div class="flex items-start space-x-4">
+                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                            </svg>
+                            <span class="text-lg font-medium">15h30 – 16h30</span>
+                        </div>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner</p>
+                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                    </div>
+                </div>
+            </div>
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                <div class="flex items-start space-x-4">
+                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                            </svg>
+                            <span class="text-lg font-medium">14h00 – 15h30</span>
+                        </div>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Maquillage professionnel et astuces beauté</p>
+                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                    </div>
+                </div>
+            </div>
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                <div class="flex items-start space-x-4">
+                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                            </svg>
+                            <span class="text-lg font-medium">15h30 – 16h30</span>
+                        </div>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Coiffure afro et soins capillaires naturels</p>
+                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                    </div>
+                </div>
+            </div>
+        <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                <div class="flex items-start space-x-4">
+                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                    <div class="flex-1">
+                        <div class="flex items-center mb-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                            </svg>
+                            <span class="text-lg font-medium">16h30 – 18h00</span>
+                        </div>
+                        <p class="text-gray-700 text-3xl font-bold mb-2">Networking & Rencontres B2B entre professionnels et marques de beauté</p>
                         <span class="text-lg text-center">Modérateur / Modératrice</span>
                     </div>
                 </div>
@@ -412,9 +495,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                                 </svg>
-                                <span class="text-lg font-medium">13:30 - 14:00</span>
+                                <span class="text-lg font-medium">08h00 – 09h30</span>
                             </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Dejeuner</p>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Accueil des participants et visites des stands</p>
                             <span class="text-lg text-center">Modérateur / Modératrice</span>
                         </div>
                     </div>
@@ -428,26 +511,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                                 </svg>
-                                <span class="text-lg font-medium">13:30 - 14:15</span>
+                                <span class="text-lg font-medium">09h30 – 11h00</span>
                             </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Le campus 4 / Conseil de pros 4</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">14:30- 15:30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Conversation / Young CEO Talk</p>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">LLa cosmétique naturelle et les produits</p>
                             <span class="text-lg text-center">Modérateur / Modératrice</span>
                         </div>
                     </div>
@@ -462,9 +528,26 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                                 </svg>
-                                <span class="text-lg font-medium">15:30 - 17:30</span>
+                                <span class="text-lg font-medium">11h00 – 12h30</span>
                             </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">L'apéro cash du SEIP</p>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Soins du visage et techniques anti-âge</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">12h30 – 14h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner et visites des stands</p>
                             <span class="text-lg text-center">Modérateur / Modératrice</span>
                         </div>
                     </div>
@@ -478,9 +561,9 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                                 </svg>
-                                <span class="text-lg font-medium">17:30 - 18:00</span>
+                                <span class="text-lg font-medium">14h00 – 15h00</span>
                             </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Cérémonie de Cloture</p>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Masterclass</p>
                             <span class="text-lg text-center">Modérateur / Modératrice</span>
                         </div>
                     </div>
@@ -494,14 +577,148 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
                                 </svg>
-                                <span class="text-lg font-medium">18:00 - 20:00</span>
+                                <span class="text-lg font-medium">15h00 – 16h30</span>
                             </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Cocktail de cloture</p>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Le rôle du digital dans la promotion des marques de beauté en Afrique</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">16h30 – 18h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2"> Défilé de mode et démonstration de maquillage de soirée</p>
                             <span class="text-lg text-center">Modérateur / Modératrice</span>
                         </div>
                     </div>
                 </div>
             </section>
+
+
+
+
+            <section id="jour3" class="tabcontent hidden">
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">08h00 – 09h30</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2"> Accueil des participants et visites des stands</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">09h30 – 11h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Conférence </p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">11h00 – 12h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Manucure, pédicure et soins des mains et des pieds</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">12h00 – 14h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner et échanges entre participants</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">14h00 – 15h30</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2"> Concours de maquillage et coiffure</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">15h30 – 17h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Remise des prix et cérémonie de clôture officielle</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 border-8 border-gray-300 rounded-lg hover:border-orange-500 transition-colors duration-300 mb-6 bg-white shadow-lg">
+                    <div class="flex items-start space-x-4">
+                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
+                        <div class="flex-1">
+                            <div class="flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
+                                </svg>
+                                <span class="text-lg font-medium">17h00 – 18h00</span>
+                            </div>
+                            <p class="text-gray-700 text-3xl font-bold mb-2">Cocktail de clôture et networking</p>
+                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
 
         </section>
 
@@ -574,7 +791,7 @@
                                 </svg>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-800 mb-2">Adresse postale</h3>
-                            <p class="text-gray-600">Riviera 2, Bonoumin</p>
+                            <p class="text-gray-600">Espace CEFCA, Cocody, près de la CNPS de Djibi</p>
                             <p class="text-gray-600">01 BP 11513 Abidjan 01</p>
                         </div>
                         
@@ -688,5 +905,22 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
+
+
+        const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
 </script>
 
