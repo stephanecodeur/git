@@ -80,18 +80,18 @@
         <!-- Navbar -->
         <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
             <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
-                <a href="#" class="text-2xl font-bold logo">MARCHE DE L'ESTHÉTIQUE ET DE LA BEAUTÉ</a>
+                <a href="#" class="text-2xl font-bold logo">MARCHE DE L'ESTHÉTIQUE <span class="text-orange-600">ET DE LA BEAUTÉ</span></a>
                 <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
-                <div class="hidden md:flex flex-1 justify-center space-x-4">  
+                <div class="hidden md:flex flex-1 justify-center space-x-4">
                     <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
                     <a href="#Intervenant" class="hover:text-orange-700 text-xl font-bold">Intervenant</a>
                     <a href="#Reservation" class="hover:text-orange-700 text-xl font-bold">Reservation</a>
                     <a href="#Programme" class="hover:text-orange-700 text-xl font-bold">Programme</a>
-                    <a href=" exposant.html" class="hover:text-orange-700 text-xl font-bold"> exposant</a>
+                    <a href="exposant.html" class="hover:text-orange-700 text-xl font-bold">EXPOSANTS</a>
                     <a href="#contact" class="hover:text-orange-700 text-xl font-bold">Contact</a>
                 </div>
             </div>
@@ -101,13 +101,25 @@
         <div class="relative">
             <div id="slider" class="relative w-full h-[800px] overflow-hidden">
                 <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.38\ \(8\).jpeg');"></div>
-                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/mon.jpeg');"></div>
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/slide.jpeg');"></div>
                 <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/WhatsApp\ Image\ 2024-09-18\ at\ 08.58.39\ \(4\).jpeg');"></div>
             </div>
     
             <!-- Overlay et contenu -->
-            <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                <h1 class="text-4xl text-white font-bold">Titre de votre site</h1>
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6">
+                <h1 class="text-4xl text-white font-bold">Programme du Marché de l'Esthétique et de la Beauté</h1>
+                
+                <!-- Texte et boutons sous le texte -->
+                <p class=" font-bold text-2xl text-orange-600">Du 20 au 22 décembre 2024</p>
+    
+                <div class="flex space-x-4">
+                    <a href="#" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300">
+                      BADGE
+                    </a>
+                    <a href="#" class="bg-black hover:bg-orange-600 active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300">
+                       ACCREDITATION
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -116,12 +128,12 @@
     
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-opacity-50 bg-gray-800 text-white p-4 hidden">
-        <div class="hidden md:flex flex-1 justify-center space-x-4">
+        <div class="flex flex-col space-y-4 text-center">
             <a href="#Apropos" class="hover:text-orange-700 text-xl font-bold">Apropos</a>
-                    <a href="#Intervenant" class="hover:text-orange-700 text-xl  font-bold">Intervenant</a>
-                    <a href="#Reservation" class="hover:text-orange-700 text-xl  font-bold">Reservation</a>
-                    <a href="#Programme" class="hover:text-orange-700 text-xl  font-bold">Programme</a>
-                    <a href="#contact" class="hover:text-orange-700 text-xl  font-bold">Contact</a>
+            <a href="#Intervenant" class="hover:text-orange-700 text-xl font-bold">Intervenant</a>
+            <a href="#Reservation" class="hover:text-orange-700 text-xl font-bold">Reservation</a>
+            <a href="#Programme" class="hover:text-orange-700 text-xl font-bold">Programme</a>
+            <a href="#contact" class="hover:text-orange-700 text-xl font-bold">Contact</a>
         </div>
     </div>
     
