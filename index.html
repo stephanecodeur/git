@@ -74,13 +74,22 @@
     scroll-behavior: smooth;
 }
 
+   /* Modale CSS  */
+        
+            .modal {
+                display: none;
+            }
+            .modal.active {
+                display: flex;
+            }
+
     </style>
 </head>
 <bo<header class="relative">
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
         <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
-            <a href="#"><img src="images/logo.jpeg" alt="" srcset=""class="w-24 h-auto"></a>
+            <a href="index.html"><img src="images/logo.jpeg" alt="" srcset=""class="w-24 h-auto"></a>
             <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -113,7 +122,7 @@
             <p class="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 text-center">Du 20 au 22 décembre 2024</p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                <a href="badge.html" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
                     BADGE
                 </a>
                 <a href="accrediter.html" class="bg-black hover:bg-orange-600 active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
@@ -176,74 +185,164 @@
     
         <!-- Section Événements -->
         <!-- Section Intervenants -->
+    
         <section id="Intervenant" class="bg-blue-500 py-12">
             <div class="container mx-auto px-6">
                 <h2 class="text-center text-white text-3xl font-bold mb-8">Les intervenants de la session de 2023</h2>
-                
+        
                 <!-- Grille des intervenants -->
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <!-- Intervenant 1 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/Paul-Harry-AITHNARD-300x300.png" alt="Paul-Henry Aithnard" class="rounded-lg w-full h-auto mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal1')">
+                            <img src="images/ulistre (1).jpeg" alt="Paul-Henry Aithnard" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Paul-Henry Aithnard</h3>
                         <p class="text-white text-sm">Directeur Général Ecobank Côte d'Ivoire</p>
                     </div>
-    
-                   
-    
+        
+                    <!-- Modal for Intervenant 1 -->
+                    <div id="modal1" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Paul-Henry Aithnard</h3>
+                            <p>Directeur Général Ecobank Côte d'Ivoire. Paul-Henry Aithnard a dirigé plusieurs projets de transformation numérique dans le secteur bancaire.</p>
+                            <button onclick="closeModal('modal1')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 2 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/mamadou-toure-300x300.jpg" alt="Mamadou Touré" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal2')">
+                            <img src="images/ulistre (10).jpeg" alt="Mamadou Touré" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Mamadou Touré</h3>
                         <p class="text-white text-sm">Ministre de la Promotion de la Jeunesse</p>
                     </div>
-    
+        
+                    <!-- Modal for Intervenant 2 -->
+                    <div id="modal2" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Mamadou Touré</h3>
+                            <p>Ministre de la Promotion de la Jeunesse. Il est très impliqué dans le développement des jeunes en Côte d'Ivoire.</p>
+                            <button onclick="closeModal('modal2')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 3 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/laureen-kouassi-olsen-300x300.jpg" alt="Laureen Kouassi" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal3')">
+                            <img src="images/ulistre (12).jpeg" alt="Laureen Kouassi" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Laureen Kouassi-Olsson</h3>
                         <p class="text-white text-sm">Founder & CEO of Birimian Holding</p>
                     </div>
-    
+        
+                    <!-- Modal for Intervenant 3 -->
+                    <div id="modal3" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Laureen Kouassi-Olsson</h3>
+                            <p>Founder & CEO of Birimian Holding. Elle est spécialisée dans l'investissement en Afrique.</p>
+                            <button onclick="closeModal('modal3')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 4 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/Ismahill-DIABY-300x300.png" alt="Ismahill Diaby" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal4')">
+                            <img src="images/ulistre (13).jpeg" alt="Ismahill Diaby" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Ismahill Diaby</h3>
                         <p class="text-white text-sm">Directeur Général VIBS</p>
                     </div>
-    
+        
+                    <!-- Modal for Intervenant 4 -->
+                    <div id="modal4" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Ismahill Diaby</h3>
+                            <p>Directeur Général VIBS. Il est un leader dans le domaine des services de télécommunications.</p>
+                            <button onclick="closeModal('modal4')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 5 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/Akouba-ANGOLA-AGGRE.png" alt="Akouba Angela Aggre" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal5')">
+                            <img src="images/ulistre (14).jpeg" alt="Akouba Angela Aggre" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Akouba Angela Aggre</h3>
                         <p class="text-white text-sm">Directrice Générale Delta</p>
                     </div>
-    
+        
+                    <!-- Modal for Intervenant 5 -->
+                    <div id="modal5" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Akouba Angela Aggre</h3>
+                            <p>Directrice Générale Delta. Elle est à la tête d'une des principales entreprises de transport en Côte d'Ivoire.</p>
+                            <button onclick="closeModal('modal5')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 6 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/Youssouf-CARIUS.png" alt="Youssouf Carius" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal6')">
+                            <img src="images/ulistre (15).jpeg" alt="Youssouf Carius" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Youssouf Carius</h3>
                         <p class="text-white text-sm">Directeur Général Pulsar</p>
                     </div>
-    
+        
+                    <!-- Modal for Intervenant 6 -->
+                    <div id="modal6" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Youssouf Carius</h3>
+                            <p>Directeur Général Pulsar. Expert en analyse financière et en stratégie d'entreprise.</p>
+                            <button onclick="closeModal('modal6')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                     <!-- Intervenant 7 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/JEAN-LUC-KONAN-PDG-GROUPE-COFINA-1536x1536.png" alt="Jean-Luc Konan" class="mx-auto rounded-lg mb-4" />
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal7')">
+                            <img src="images/ulistre (16).jpeg" alt="Jean-Luc Konan" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
                         <h3 class="text-white font-semibold text-lg">Jean-Luc Konan</h3>
                         <p class="text-white text-sm">Directeur Général Cofina</p>
                     </div>
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg ">
-                        <img src="images/Photo-officielle-M-Sebastien-KADIO-MOROKRO-500x500-1-300x300.jpg" alt="JSébastien Kadio" class="mx-auto rounded-lg mb-4" />
-                        <h3 class="text-white font-semibold text-lg">JSébastien Kadio</h3>
-                        <p class="text-white text-sm">Administrateur Directeur Général</p>
+        
+                    <!-- Modal for Intervenant 7 -->
+                    <div id="modal7" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Jean-Luc Konan</h3>
+                            <p>Directeur Général Cofina. Il est à la tête d'un important groupe de services financiers en Afrique de l'Ouest.</p>
+                            <button onclick="closeModal('modal7')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
                     </div>
-    
+        
                     <!-- Intervenant 8 -->
-                    
+                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
+                        <a href="#" onclick="openModal('modal8')">
+                            <img src="images/ulistre (6).jpeg" alt="Patricia Zoundi" class="rounded-lg w-full h-auto mb-4" />
+                        </a>
+                        <h3 class="text-white font-semibold text-lg">Patricia Zoundi</h3>
+                        <p class="text-white text-sm">CEO Cinetpay</p>
+                    </div>
+        
+                    <!-- Modal for Intervenant 8 -->
+                    <div id="modal8" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+                        <div class="bg-white rounded-lg p-6 w-1/2">
+                            <h3 class="text-black text-xl font-semibold mb-4">Patricia Zoundi</h3>
+                            <p>CEO Cinetpay. Patricia Zoundi est une pionnière dans les solutions de paiement en ligne en Afrique.</p>
+                            <button onclick="closeModal('modal8')" class="bg-blue-500 text-white px-4 py-2 rounded mt-4">Fermer</button>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </section>
-    
+       
+        
+      
+        
       <section id="Reservation"> 
         <div class="container mx-auto p-6">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -343,7 +442,7 @@
                             <span class="text-lg font-medium">08h00 – 09h30</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Accueil des participants et inscription</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -360,7 +459,7 @@
                             <span class="text-lg font-medium">09h30 – 10h00</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Cérémonie d’ouverture officielle</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -378,7 +477,7 @@
                 <span class="text-lg font-medium">10h00 – 12h00 </span>
             </div>
             <p class="text-gray-700 text-3xl font-bold mb-2">Conférence inaugurale</p>
-            <span class="text-lg text-center">Modérateur / Modératrice</span>
+            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
         </div>
     </div>
 </div>
@@ -394,7 +493,7 @@
                 <span class="text-lg font-medium">12h00 – 13h00 </span>
             </div>
             <p class="text-gray-700 text-3xl font-bold mb-2"> Visite des stands et des exposants</p>
-            <span class="text-lg text-center">Modérateur / Modératrice</span>
+            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
         </div>
     </div>
 </div>
@@ -409,7 +508,7 @@
                             <span class="text-lg font-medium">13h00 – 14h00</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -424,7 +523,7 @@
                             <span class="text-lg font-medium">14h00 – 15h30</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Atelier pratique</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -439,7 +538,7 @@
                             <span class="text-lg font-medium">15h30 – 16h30</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -454,7 +553,7 @@
                             <span class="text-lg font-medium">14h00 – 15h30</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Maquillage professionnel et astuces beauté</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -469,7 +568,7 @@
                             <span class="text-lg font-medium">15h30 – 16h30</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Coiffure afro et soins capillaires naturels</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -484,7 +583,7 @@
                             <span class="text-lg font-medium">16h30 – 18h00</span>
                         </div>
                         <p class="text-gray-700 text-3xl font-bold mb-2">Networking & Rencontres B2B entre professionnels et marques de beauté</p>
-                        <span class="text-lg text-center">Modérateur / Modératrice</span>
+                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                     </div>
                 </div>
             </div>
@@ -511,7 +610,7 @@
                                 <span class="text-lg font-medium">08h00 – 09h30</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Accueil des participants et visites des stands</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -527,7 +626,7 @@
                                 <span class="text-lg font-medium">09h30 – 11h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">LLa cosmétique naturelle et les produits</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -544,7 +643,7 @@
                                 <span class="text-lg font-medium">11h00 – 12h30</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Soins du visage et techniques anti-âge</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -561,7 +660,7 @@
                                 <span class="text-lg font-medium">12h30 – 14h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner et visites des stands</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -577,7 +676,7 @@
                                 <span class="text-lg font-medium">14h00 – 15h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Masterclass</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -593,7 +692,7 @@
                                 <span class="text-lg font-medium">15h00 – 16h30</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Le rôle du digital dans la promotion des marques de beauté en Afrique</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -608,7 +707,7 @@
                                 <span class="text-lg font-medium">16h30 – 18h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2"> Défilé de mode et démonstration de maquillage de soirée</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -629,7 +728,7 @@
                                 <span class="text-lg font-medium">08h00 – 09h30</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2"> Accueil des participants et visites des stands</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -645,7 +744,7 @@
                                 <span class="text-lg font-medium">09h30 – 11h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Conférence </p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -662,7 +761,7 @@
                                 <span class="text-lg font-medium">11h00 – 12h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Manucure, pédicure et soins des mains et des pieds</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -679,7 +778,7 @@
                                 <span class="text-lg font-medium">12h00 – 14h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner et échanges entre participants</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -695,7 +794,7 @@
                                 <span class="text-lg font-medium">14h00 – 15h30</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2"> Concours de maquillage et coiffure</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -711,7 +810,7 @@
                                 <span class="text-lg font-medium">15h30 – 17h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Remise des prix et cérémonie de clôture officielle</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -726,7 +825,7 @@
                                 <span class="text-lg font-medium">17h00 – 18h00</span>
                             </div>
                             <p class="text-gray-700 text-3xl font-bold mb-2">Cocktail de clôture et networking</p>
-                            <span class="text-lg text-center">Modérateur / Modératrice</span>
+                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
                         </div>
                     </div>
                 </div>
@@ -875,7 +974,7 @@
 
 
           <footer class="bg-blue-900 text-white text-center p-6 mt-8 ">
-            <p class="text-sm">&copy; 2024 Salon de l'Épargne. Tous droits réservés.</p>
+            <p class="text-sm">&copy; 2024 Marché de l'Esthétique et de la Beauté. Tous droits réservés.</p>
           </footer>
 
        
@@ -937,6 +1036,15 @@
     setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
 
 
-    
+    // modale description
+
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.add('hidden');
+        
+        }
 </script>
 
