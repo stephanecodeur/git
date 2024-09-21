@@ -134,16 +134,35 @@
 </header>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="md:hidden fixed top-16 left-0 w-full bg-opacity-50 bg-gray-800 text-white p-4 hidden">
-    <div class="flex flex-col space-y-4 text-center">
-        <a href="#Apropos" class="text-orange-700   hover:text-white text-lg font-bold">Apropos</a>
-        <a href="#Intervenant" class="text-orange-700   hover:text-white text-lg font-bold">Intervenant</a>
-        <a href="#Reservation" class="text-orange-700   hover:text-white text-lg font-bold">Reservation</a>
-        <a href="#Programme" class="text-orange-700   hover:text-white text-lg font-bold">Programme</a>
-        <a href="exposant.html" class="text-orange-700   hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
-        <a href="#contact" class="text-white  hover:text-orange-700 text-lg font-bold">Contact</a>
+<!-- Icone de téléphone pour ouvrir le menu mobile -->
+<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
+    <!-- Vous pouvez utiliser une icône de téléphone ou un burger icon pour ouvrir -->
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
+
+<!-- Menu mobile caché initialement -->
+<!-- Icone de téléphone pour ouvrir le menu mobile -->
+<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
+    <!-- Icône de menu (burger icon) -->
+    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
+
+<!-- Menu mobile caché initialement -->
+<div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex flex-col space-y-4 text-center mt-16 p-4">
+        <a href="#Apropos" class="text-orange-700 hover:text-black text-lg font-bold">Apropos</a>
+        <a href="#Intervenant" class="text-orange-700 hover:text-black text-lg font-bold">Intervenant</a>
+        <a href="#Reservation" class="text-orange-700 hover:text-black text-lg font-bold">Reservation</a>
+        <a href="#Programme" class="text-orange-700 hover:text-black text-lg font-bold">Programme</a>
+        <a href="exposant.html" class="text-orange-700 hover:text-black text-lg font-bold">EXPOSANTS</a>
+        <a href="#contact" class="text-orange-700 hover:text-black text-lg font-bold">Contact</a>
     </div>
 </div>
+
 
     
     
@@ -835,10 +854,10 @@
         </section>
 
             <section class="bg-gray-100 py-8">
-                <h3 class="text-3xl text-center font-bold p-4">Co-host</h3>
+                <h3 class="text-3xl text-center font-bold p-4">Co-host</h3> <br>
                 <div class="container mx-auto flex justify-center">
                     <div class="w-full max-w-xs">
-                        <img src="images/logo-ECOBANK-300x157.png" alt="Co-host" class="w-full h-auto rounded-lg shadow-lg">
+                        <img src="images/djamo.png" alt="Co-host" class="w-full h-auto rounded-lg shadow-lg">
                     </div>
                 </div>
             </section>
@@ -980,7 +999,7 @@
        
 </body>
 </html>
-<script>
+<!-- <script>
     window.addEventListener('scroll', function() {
         const navbar = document.getElementById('navbar');
         if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
@@ -992,7 +1011,21 @@
         }
     });
 
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
 
+    // Lorsque l'icône de menu est cliquée, basculer l'animation
+    menuToggle.addEventListener('click', function() {
+        // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        } else {
+            // Ajouter 'translate-x-full' pour cacher à nouveau le menu
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        }
+    });
 
     function openTab(evt, tabName, tabId) {
       var i, tabcontent, tablinks;
@@ -1046,5 +1079,78 @@
         document.getElementById(modalId).classList.add('hidden');
         
         }
-</script>
+</script> -->
 
+<script>
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
+            navbar.classList.remove('navbar-default');
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.add('navbar-default');
+        }
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Lorsque l'icône de menu est cliquée, basculer l'animation
+    menuToggle.addEventListener('click', function() {
+        // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        } else {
+            // Ajouter 'translate-x-full' pour cacher à nouveau le menu
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        }
+    });
+
+    function openTab(evt, tabName, tabId) {
+        var i, tabcontent, tablinks;
+        
+        // Hide all tab contents
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("hidden");
+        }
+
+        // Remove active class from all buttons
+        tablinks = document.getElementsByTagName("button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+        // Show current tab and activate its button
+        document.getElementById(tabName).classList.remove("hidden");
+        document.getElementById(tabId).classList.add("active");
+    }
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
+
+    // Modale description
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.add('hidden');
+    }
+</script>
