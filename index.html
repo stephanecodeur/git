@@ -12,8 +12,8 @@
 .hidden { display: none; }
     .active-tab { }
     .tablink-jour1.active { background-color:black ; color: white; } /* Orange active */
-    .tablink-jour1:hover { background-color:black; color: white; } /* Hover black */
-    .tablink-jour2.active { background-color: black; color: white; } /* Black active */
+    .tablink-jour1:hover { background-color:#fe48a5; color: white; } /* Hover black */
+    .tablink-jour2.active { background-color: #fe48a5; color: white; } /* Black active */
     .tablink-jour2:hover { background-color: black; color: white; } /* Hover blue */
 
 
@@ -25,11 +25,12 @@
         }
         /* Navbar normale */
         .navbar-default {
-            background-color: rgb(211, 80, 33); /* Couleur transparente sur l'image */
+            background-color: #630234;
+            height: 15vh; /* Couleur transparente sur l'image */
         }
         /* Navbar fixée au scroll */
         .navbar-scrolled {
-            background-color: #630234;;
+            background-color: #630234;
              /* Couleur solide lorsque défilé */
             height: 15vh;
         }
@@ -88,16 +89,17 @@
 
 
 
-            .bg-customPurple,a:hover {
+            .bg-customPurplet,a:hover {
     background-color: #67009b;
   }
   .text-customPink1 {
-    color: #f042a4;
+    /* color: #f042a4; */
+    color: #67009b;
   }
   .border-customPink2 {
     border-color: #fe48a5;
   }
-
+  
 
   
 
@@ -170,14 +172,14 @@
 </button>
 
 <!-- Menu mobile caché initialement -->
-<div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
-    <div class="flex flex-col space-y-4 text-center mt-16 p-4">
-        <a href="#Apropos" class="text-orange-700 hover:text-black text-lg font-bold ">Apropos</a>
-        <a href="#Intervenant" class="text-orange-700 hover:text-black text-lg font-bold">Intervenant</a>
+<div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs  shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"style="  background-color: #630234;">
+    <div class="flex flex-col space-y-4 text-center mt-20 p-4">
+        <a href="#Apropos" class="text-white hover:text-black text-lg font-bold ">A Propos</a>
+        <a href="#Intervenant" class="text-white hover:text-black text-lg font-bold">Intervenant</a>
         <a href="#Reservation" class="text-white  hover:text-white  text-lg font-bold">Reservation</a>
-        <a href="#Programme" class="text-orange-700 hover:text-black text-lg font-bold">Programme</a>
-        <a href="exposant.html" class="text-orange-700 hover:text-black text-lg font-bold">EXPOSANTS</a>
-        <a href="#contact" class="text-black hover:text-orange-700 text-lg font-bold">Contact</a>
+        <a href="#Programme" class="text-white hover:text-black text-lg font-bold">Programme</a>
+        <a href="exposant.html" class="text-white hover:text-black text-lg font-bold">EXPOSANTS</a>
+        <a href="#contact" class="text-white hover:text-white text-lg font-bold">Contact</a>
     </div>
 </div>
 
@@ -189,7 +191,7 @@
             <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <!-- Texte -->
                 <div>
-                    <h2 class="text-red-600 text-lg font-semibold mb-2">À propos du Marché de l'Esthétique et de la Beauté</h2>
+                    <h2 class="text-xl font-semibold mb-2"style="color: #630234;">À propos du Marché de l'Esthétique et de la Beauté</h2>
                     <h1 class="text-4xl font-bold mb-4">Bienvenue au Marché de l'Esthétique et de la Beauté</h1>
                     <p class="text-gray-700 leading-relaxed mb-6">
                         Le Marché de l'Esthétique et de la Beauté est un événement annuel incontournable qui célèbre l'univers de la beauté, du bien-être et de l'esthétique en Côte d'Ivoire. Prévu pour se tenir du 20 au 22 décembre 2024 à l'Espace CEFCA, à Cocody, cet événement vise à rassembler les professionnels, les marques, et les passionnés du secteur pour trois jours de découvertes, d'innovations et de rencontres.
@@ -202,7 +204,7 @@
                     </p>
                     <!-- Bouton -->
                     <a href="#"
-                        class="inline-block bg-orange-500 hover:bg-blue-500 text-white py-3 px-6 rounded-full mt-4">En savoir plus</a>
+                        class="inline-block  hover:bg-blue-500 text-white text-xl text-bold py-3 px-6 rounded-full mt-4"style="background-color: #630234;">En savoir plus</a>
                 </div>
     
                 <!-- Image -->
@@ -223,7 +225,7 @@
         <!-- Section Événements -->
         <!-- Section Intervenants -->
     
-        <section id="Intervenant" class="bg-blue-500 py-12">
+        <section id="Intervenant" class="py-12"style="background:#630234">
             <div class="container mx-auto px-6">
                 <h2 class="text-center text-white text-3xl font-bold mb-8">Les intervenants de la session de 2023</h2>
         
@@ -436,7 +438,7 @@
                     <textarea placeholder="Message" class="border border-gray-300 p-3 rounded w-full h-32 focus:outline-none focus:ring-2 focus:ring-gray-100"></textarea>
 
                     <!-- Bouton envoyer -->
-                    <button type="submit" class="bg-orange-500 text-white p-2 rounded w-40 font-semibold hover:bg-blue-600">
+                    <button type="submit" class=" text-white p-2 rounded w-40 font-semibold hover:bg-blue-600"style="  background-color: #630234;">
                         Envoyer
                     </button>
                 </form>
@@ -450,14 +452,16 @@
              <section id="Programme">
                 <div class=" mb-4">
                     <div class="p-4">
-                        <h2 class="text-xl font-bold text-orange-500 mb-4">
+                        <h2 class="text-xl font-bold text-orange-500 mb-4"style="  color: #630234;">
                             À propos du MEB<br>
-                            <span class="text-xl font-bold text-blue-900">Programme</span>
+                            <span class="text-xl font-bold "tyle="  color: #630234;">Programme</span>
                         </h2>
                         <div class="flex flex-wrap justify-center space-x-2">
-                            <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold hover:bg-black bg-orange-500 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour1', 'tab1')">Jour 1 <br> 20 décembre 2024 </button>
-                            <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour2', 'tab2')">Jour 2 <br> 21 décembre 2024 </button>
-                            <button id="tab3" class="tablink-jour3 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour3', 'tab3')">Jour 3 <br> 22 décembre 2024</button>
+                            <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold hover:bg-black  mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour1', 'tab1')"style="background-color: #630234;">Jour 1 <br> 20 décembre 2024 </button>
+
+                            <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour2', 'tab2')"style="background:#fe48a5;">Jour 2 <br> 21 décembre 2024 </button>
+
+                            <button id="tab3" class="tablink-jour3 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour3', 'tab3')"style="background-color:#630234">Jour 3 <br> 22 décembre 2024</button>
                         </div>
                     </div>
                     
@@ -923,7 +927,7 @@
             <section id="contact" class="container mx-auto py-16">
                 <!-- Contact Info Section -->
                 <div class="text-center">
-                    <p class="text-orange-600 font-bold">Contact</p>
+                    <p class="text-customPink1 font-bold">Contact</p>
                     <h2 class="text-4xl font-extrabold text-gray-900">Contact Info</h2>
                     <hr class="w-16 my-2 mx-auto border-t-2 border-gray-300">
                 </div>
@@ -960,7 +964,7 @@
                     <!-- Contact Form Section -->
                     <div class="flex-1 md:w-2/3">
                         <div class="text-center mb-8">
-                            <p class="text-orange-600 font-bold">Contactez-nous</p>
+                            <p class="text-customPink1 text-2xl text-bold">Contactez-nous</p>
                             <h3 class="text-3xl font-bold text-gray-900">Laissez-nous un message.</h3>
                             <hr class="w-16 my-2 mx-auto border-t-2 border-gray-300">
                         </div>
@@ -977,7 +981,7 @@
                                     <textarea name="message" rows="4" placeholder="Message" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="bg-orange-600 text-white font-bold py-3 px-8 rounded-lg">ENVOYER</button>
+                                    <button type="submit" class="bg-customPurple text-white font-bold py-3 px-8 rounded-lg">ENVOYER</button>
                                 </div>
                             </form>
                         </div>
@@ -1010,7 +1014,7 @@
 
 
 
-          <footer class="bg-blue-900 text-white text-center p-6 mt-8 ">
+          <footer class=" text-white text-center p-6 mt-8 " style="background-color:#630234">
             <p class="text-sm">&copy; 2024 Marché de l'Esthétique et de la Beauté. Tous droits réservés.</p>
           </footer>
 
