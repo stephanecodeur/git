@@ -103,10 +103,13 @@
   .hover:hover{  border-color: #fe48a5}
   .hove:hover{  border-color: #630234}
   
-
+  .bg-customPurple{background: #630234;}
+  .rose{color: #fe48a5;}
+  .rose:hover{background-color: #fe48a5;}
+  .rosebg{background: #fe48a5;}
     </style>
 </head>
-<bo<header class="relative">
+<header class="relative">
     <!-- Navbar -->
     <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
         <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
@@ -122,8 +125,7 @@
                 <a href="#Reservation" class="text-white  hover:text-white text-lg md:text-xl font-bold">Reservation</a>
                 <a href="#Programme" class="text-white  hover:text-white text-lg md:text-xl font-bold">Programme</a>
                 <a href="exposant.html" class="text-white  hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
-                <a href="badge.html" class="text-white  hover:text-white text-lg md:text-xl font-bold">badge</a>
-                <a href="#" class="text-white  hover:text-white text-lg md:text-xl font-bold">Faq</a>
+               
                 <a href="#contact" class="text-white  hover:text-white text-lg md:text-xl font-bold">Contact</a>
             </div>
         </div>
@@ -142,13 +144,13 @@
             <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center"> Marché de l'Esthétique et de la Beauté</h1>
             
             <!-- Texte et boutons sous le texte -->
-            <p class="text-lg sm:text-xl md:text-2xl font-bold text-orange-600 text-center">Du 20 au 22 décembre 2024</p>
+            <p class="text-lg sm:text-xl md:text-2xl font-bold  text-center"style="color:#fe48a5;">Du 20 au 22 décembre 2024</p>
 
             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <!-- <a href="badge.html" class="bg-orange-600 hover:bg-black active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
-                    BADGE
-                </a> -->
-                <a href="accrediter.html" class="bg-black hover:bg-orange-600 active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                <a href="faq.html" class="bg-customPurple rose active:bg-orange-900 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                    FAQ
+                </a> 
+                <a href="accrediter.html" class="bg-customPurple rose active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
                     ACCREDITATION
                 </a>
             </div>
@@ -167,12 +169,7 @@
 
 <!-- Menu mobile caché initialement -->
 <!-- Icone de téléphone pour ouvrir le menu mobile -->
-<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
-    <!-- Icône de menu (burger icon) -->
-    <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-</button>
+
 
 <!-- Menu mobile caché initialement -->
 <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs  shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"style="  background-color: #630234;">
@@ -182,8 +179,7 @@
         <a href="#Reservation" class="text-white  hover:text-white  text-lg font-bold">Reservation</a>
         <a href="#Programme" class="text-white hover:text-black text-lg font-bold">Programme</a>
         <a href="exposant.html" class="text-white hover:text-black text-lg font-bold">EXPOSANTS</a>
-        <a href="#" class="text-white hover:text-black text-lg font-bold">badge</a>
-        <a href="#" class="text-white hover:text-black text-lg font-bold">Faq</a>
+       
         <a href="#contact" class="text-white hover:text-white text-lg font-bold">Contact</a>
     </div>
 </div>
@@ -209,7 +205,7 @@
                     </p>
                     <!-- Bouton -->
                     <a href="#"
-                        class="inline-block  hover:bg-blue-500 text-white text-xl text-bold py-3 px-6 rounded-full mt-4"style="background-color: #630234;">En savoir plus</a>
+                        class="inline-block bg-customPurple rose text-white text-xl text-bold py-3 px-6 rounded-full mt-4">En savoir plus</a>
                 </div>
     
                 <!-- Image -->
@@ -443,7 +439,7 @@
                     <textarea placeholder="Message" class="border border-gray-300 p-3 rounded w-full h-32 focus:outline-none focus:ring-2 focus:ring-gray-100"></textarea>
 
                     <!-- Bouton envoyer -->
-                    <button type="submit" class=" text-white p-2 rounded w-40 font-semibold hover:bg-blue-600"style="  background-color: #630234;">
+                    <button type="submit" class="bg-customPurple rose text-white p-2 rounded w-40 font-semibold ">
                         Envoyer
                     </button>
                 </form>
@@ -986,7 +982,7 @@
                                     <textarea name="message" rows="4" placeholder="Message" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="bg-customPurple text-white font-bold py-3 px-8 rounded-lg">ENVOYER</button>
+                                    <button type="submit" class="bg-customPurple rose text-white font-bold py-3 px-8 rounded-lg">ENVOYER</button>
                                 </div>
                             </form>
                         </div>

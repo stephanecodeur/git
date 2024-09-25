@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  
+</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+.hidden { display: none; }
+    .active-tab { }
+    .tablink-jour1.active { background-color:black ; color: white; } /* Orange active */
+    .tablink-jour1:hover { background-color:#fe48a5; color: white; } /* Hover black */
+    .tablink-jour2.active { background-color: #fe48a5; color: white; } /* Black active */
+    .tablink-jour2:hover { background-color: black; color: white; } /* Hover blue */
+
+
+        /* Assurez-vous que la navbar est au-dessus de l'image */
+        .navbar {
+            z-index: 10;
+            transition: background-color 0.8s; /* Animation de la transition */
+            
+        }
+        /* Navbar normale */
+        .navbar-default {
+            background-color: #630234;
+            /* Couleur transparente sur l'image */
+        }
+        /* Navbar fixée au scroll */
+        .navbar-scrolled {
+            background-color: #630234;
+             /* Couleur solide lorsque défilé */
+            height: 15vh;
+        }
+
+      
+        /* Espacement pour éviter que le contenu entre dans la navbar */
+        .content {
+            margin-top: 4rem; /* Ajustez selon la hauteur de votre navbar */
+        }
+        /* Ajustements pour l'image de fond */
+        .hero-image {
+            height: 200vh; /* Ajustez la hauteur selon vos besoins */
+            background-size: cover; /* Couvre toute la section */
+            background-position: center; /* Centre l'image */
+            display: flex; /* Utiliser flexbox pour centrer le contenu */
+            align-items: center; /* Aligne le contenu verticalement */
+            justify-content: center; /* Aligne le contenu horizontalement */
+        }
+        .hero-overlay {
+            position: absolute; /* Superposition sombre */
+            inset: 0; /* Couvre toute la section */
+            background: rgba(0, 0, 0, 0.5); /* Couleur de fond sombre avec opacité */
+        }
+        .hero-content {
+            position: relative; /* Positionner par rapport à l'image */
+            z-index: 10; /* Assure que le texte est au-dessus de la superposition */
+            text-align: center; /* Centre le texte */
+        }
+        /* Ajustements pour centrer le logo et décaler les éléments de la navbar */
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            margin-right: auto; /* Pousse le logo vers la gauche */
+            margin-left: 20px; /* Ajustez cette valeur selon vos besoins */
+        }
+        .nav-links {
+            margin-left: auto; /* Pousse les liens vers la droite */
+            margin-right: 20px; /* Ajustez cette valeur selon vos besoins */
+        }
+
+        html {
+    scroll-behavior: smooth;
+}
+
+   /* Modale CSS  */
+        
+            .modal {
+                display: none;
+            }
+            .modal.active {
+                display: flex;
+            }
+
+
+
+            .bg-customPurplet,a:hover {
+    background-color: #67009b;
+  }
+  .text-customPink1 {
+    /* color: #f042a4; */
+    color: #67009b;
+  }
+  .border-customPink2 {
+    border-color: #fe48a5;
+  }
+  
+  .hover:hover{  border-color: #fe48a5}
+  .hove:hover{  border-color: #630234}
+  
+  .bg-customPurple{background: #630234;}
+  .rose{color: #fe48a5;}
+  .rose:hover{background-color: #fe48a5;}
+  .rosebg{background: #fe48a5;}
+
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    background-color: #630234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.faq-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+}
+
+.faq-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+}
+
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #fe48a5;
+}
+
+.faq-symbol {
+    margin-right: 10px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+    line-height: 1.6;
+}
+
+    </style>
+</head>
+
+<header class="relative"></header>
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
+        <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
+            <img src="images/logo fond.jpeg" alt="" srcset=""class="w-24 h-auto">
+            <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex flex-1 justify-center space-x-4">
+                <a href="#Apropos" class="text-white hover:text-white text-lg md:text-xl font-bold">Apropos</a>
+                <a href="#Intervenant" class="text-white  hover:text-white text-lg md:text-xl font-bold">Intervenant</a>
+                <a href="#Reservation" class="text-white  hover:text-white text-lg md:text-xl font-bold">Reservation</a>
+                <a href="#Programme" class="text-white  hover:text-white text-lg md:text-xl font-bold">Programme</a>
+                <a href="exposant.html" class="text-white  hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
+               
+                <a href="#contact" class="text-white  hover:text-white text-lg md:text-xl font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Image de Fond (Slider) -->
+    <div class="relative">
+        <div id="slider" class="relative w-full h-[400px] md:h-[800px] overflow-hidden">
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/SLIDE2.jpeg');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
+        </div>
+
+        <!-- Overlay et contenu -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6 p-4 md:p-0">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center"> Marché de l'Esthétique et de la Beauté</h1>
+            
+            <!-- Texte et boutons sous le texte -->
+            <p class="text-lg sm:text-xl md:text-2xl font-bold  text-center"style="color:#fe48a5;">Du 20 au 22 décembre 2024</p>
+
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="faq.html" class="bg-customPurple rose active:bg-orange-900 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                    FAQ
+                </a> 
+                <a href="index.html" class="bg-customPurple rose active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                    Retour
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+    <!-- Mobile Menu -->
+<!-- Icone de téléphone pour ouvrir le menu mobile -->
+<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
+    <!-- Vous pouvez utiliser une icône de téléphone ou un burger icon pour ouvrir -->
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+</button>
+
+<!-- Menu mobile caché initialement -->
+<!-- Icone de téléphone pour ouvrir le menu mobile -->
+
+
+<!-- Menu mobile caché initialement -->
+<div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs  shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"style="  background-color: #630234;">
+    <div class="flex flex-col space-y-4 text-center mt-20 p-4">
+        <a href="#Apropos" class="text-white hover:text-black text-lg font-bold ">A Propos</a>
+        <a href="#Intervenant" class="text-white hover:text-black text-lg font-bold">Intervenant</a>
+        <a href="#Reservation" class="text-white  hover:text-white  text-lg font-bold">Reservation</a>
+        <a href="#Programme" class="text-white hover:text-black text-lg font-bold">Programme</a>
+        <a href="exposant.html" class="text-white hover:text-black text-lg font-bold">EXPOSANTS</a>
+       
+        <a href="#contact" class="text-white hover:text-white text-lg font-bold">Contact</a>
+    </div>
+</div>
+
+
+
+
+    <!-- Service Start -->
+    <div class="page-container">
+        <div class="faq-container">
+            <h1 class="text-2xl  text-bold"style="color:#fe48a5;">FAQ</h1>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Quelle est votre politique de retour ?
+                </div>
+                <div class="faq-answer">
+                    Nous acceptons les retours dans les 30 jours suivant l'achat avec un reçu valide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Offrez-vous des réductions pour les étudiants ?
+                </div>
+                <div class="faq-answer">
+                    Oui, nous offrons une réduction de 10 % pour les étudiants avec une carte d'identité valide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Quelle est votre politique de retour ?
+                </div>
+                <div class="faq-answer">
+                    Nous acceptons les retours dans les 30 jours suivant l'achat avec un reçu valide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Offrez-vous des réductions pour les étudiants ?
+                </div>
+                <div class="faq-answer">
+                    Oui, nous offrons une réduction de 10 % pour les étudiants avec une carte d'identité valide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Quelle est votre politique de retour ?
+                </div>
+                <div class="faq-answer">
+                    Nous acceptons les retours dans les 30 jours suivant l'achat avec un reçu valide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleAnswer(this)">
+                    <span class="faq-symbol">+</span> Offrez-vous des réductions pour les étudiants ?
+                </div>
+                <div class="faq-answer">
+                    Oui, nous offrons une réduction de 10 % pour les étudiants avec une carte d'identité valide.
+                </div>
+            </div>
+            <!-- Ajoutez d'autres questions ici -->
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    
+    <footer class=" text-white text-center p-6 mt-8 " style="background-color:#630234">
+        <p class="text-sm">&copy; 2024 Marché de l'Esthétique et de la Beauté. Tous droits réservés.</p>
+      </footer>
+
+   
+</body>
+</html>
+
+
+<script>
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
+        navbar.classList.remove('navbar-default');
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+        navbar.classList.add('navbar-default');
+    }
+});
+
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+// Lorsque l'icône de menu est cliquée, basculer l'animation
+menuToggle.addEventListener('click', function() {
+    // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
+    if (mobileMenu.classList.contains('translate-x-full')) {
+        mobileMenu.classList.remove('translate-x-full');
+        mobileMenu.classList.add('translate-x-0');
+    } else {
+        // Ajouter 'translate-x-full' pour cacher à nouveau le menu
+        mobileMenu.classList.add('translate-x-full');
+        mobileMenu.classList.remove('translate-x-0');
+    }
+});
+
+function openTab(evt, tabName, tabId) {
+    var i, tabcontent, tablinks;
+    
+    // Hide all tab contents
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.add("hidden");
+    }
+
+    // Remove active class from all buttons
+    tablinks = document.getElementsByTagName("button");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active");
+    }
+
+    // Show current tab and activate its button
+    document.getElementById(tabName).classList.remove("hidden");
+    document.getElementById(tabId).classList.add("active");
+}
+
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.style.opacity = i === index ? '1' : '0';
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
+
+// Modale description
+function openModal(modalId) {
+    document.getElementById(modalId).classList.remove('hidden');
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.add('hidden');
+}
+
+        // faq
+   function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const symbol = element.querySelector('.faq-symbol');
+    if (answer.style.display === "none" || answer.style.display === "") {
+        answer.style.display = "block";
+        symbol.textContent = "-";
+    } else {
+        answer.style.display = "none";
+        symbol.textContent = "+";
+    }
+}
+
+
+
+
+  
+
+</script>

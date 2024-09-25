@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire d'inscription</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <style>.hover:hover{  border-color: #fe48a5}
+        .hove:hover{  border-color: #630234}
+        
+        .bg-customPurple{background: #630234;}
+        .rose{color: #fe48a5;}
+        .rose:hover{background-color: #fe48a5;}
+        .rosebg{background: #fe48a5;}</style>
 </head>
 <body class="bg-white p-8">
     <!-- Form Title -->
     <div class="text-center mb-8">
-        <h1 class="text-4xl font-bold text-red-600 uppercase">Formulaire d'inscription visiteurs</h1>
-        <p class="text-2xl font-semibold mt-4">"Rejoignez-nous au SI-2024"</p>
+        <h1 class="text-4xl font-bold  uppercase"style="color:#fe48a5;">Formulaire d'inscription visiteurs</h1>
+        <p class="text-2xl font-semibold mt-4">"Rejoignez-nous au MEB-2024"</p>
         <p class="mt-4 text-left max-w-4xl mx-auto text-lg">
-            Inscrivez-vous maintenant au <span class="text-red-600 font-bold">SI-2024</span> !
+            Inscrivez-vous maintenant au <span class=" font-bold"style="color:#fe48a5;">MEB-2024</span> !
             <br> Vous recevrez :
         </p>
         <ul class="list-disc list-inside text-left max-w-3xl mx-auto mt-4 text-lg">
@@ -25,7 +35,7 @@
             <li>En ligne : Connectez-vous à la plateforme en ligne avec votre code reçu par SMS.</li>
             <li>Participants hybrides : Profitez des deux options pour une expérience complète.</li>
         </ul>
-        <p class="mt-6 italic font-medium text-red-600">Vivez l'expérience SI-2024, en présentiel ou à distance !</p>
+        <p class="mt-6 italic font-medium "style="color:#fe48a5;">Vivez l'expérience MEB-2024, en présentiel ou à distance !</p>
         <p class="text-sm text-gray-500 italic">(Pour les inscriptions automatisées - veuillez scanner le code QR en dessus)</p>
     </div>
 
@@ -78,105 +88,128 @@
         </div>
 
         <!-- Centres d'intérêt -->
-        <div class="grid grid-cols-4 gap-4">
-            <!-- Groupe de gauche : Centres d'intérêt -->
-            <div class="col-span-2">
-                <p class="text-lg font-bold">Centres d'intérêt (plusieurs choix possibles) :</p>
-                <div class="mt-3 space-y-2">
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Investissement" class="text-red-500">
-                            <span class="ml-2">Investissement</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Financement" class="text-red-500">
-                            <span class="ml-2">Financement</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Entrepreneuriat" class="text-red-500">
-                            <span class="ml-2">Entrepreneuriat</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Innovation et technologie" class="text-red-500">
-                            <span class="ml-2">Innovation et technologie</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Innovation et technologie" class="text-red-500">
-                            <span class="ml-2">Innovation et technologie</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Innovation et technologie" class="text-red-500">
-                            <span class="ml-2">Innovation et technologie</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Innovation et technologie" class="text-red-500">
-                            <span class="ml-2">Autre</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        
-            <!-- Groupe de droite : Centres d'intérêt 2 -->
-            <div class="col-span-2">
-                <p class="text-lg font-bold">Objectifs de votre participation (plusieurs choix possibles) :</p>
-                <div class="mt-3 space-y-2">
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Développement durable" class="text-red-500">
-                            <span class="ml-2">Développement durable</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
-                            <span class="ml-2">Autonomisation des femmes et des jeunes</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
-                            <span class="ml-2">Autonomisation des femmes et des jeunes</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
-                            <span class="ml-2">Autonomisation des femmes et des jeunes</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
-                            <span class="ml-2">Autonomisation des femmes et des jeunes</span>
-                        </label>
-                    </div>
-                    <div class="col-span-4">
-                        <label class="inline-flex items-center">
-                            <input type="checkbox" value="Autre" class="text-red-500">
-                            <span class="ml-2">Autre</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
+      <!-- Centres d'intérêt -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- Groupe de gauche : Centres d'intérêt -->
+    <div class="col-span-1 sm:col-span-2">
+        <p class="text-lg font-bold">Centres d'intérêt (plusieurs choix possibles) :</p>
+        <div class="mt-3 space-y-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+            <!-- Continue adding more checkboxes... -->
         </div>
-        
+    </div>
+
+    <!-- Groupe de droite : Objectifs de participation -->
+    <div class="col-span-1 sm:col-span-2">
+        <p class="text-lg font-bold">Objectifs de votre participation :</p>
+        <div class="mt-3 space-y-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+            <!-- Continue adding more checkboxes... -->
+        </div>
+    </div>
+</div>
 
 
 
+
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- Groupe de gauche : Centres d'intérêt -->
+    <div class="col-span-1 sm:col-span-2">
+        <p class="text-lg font-bold">Comment avez-vous entendu parler du SI-2024 ?:</p>
+        <div class="mt-3 space-y-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+
+
+
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+
+
+
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+            <!-- Continue adding more checkboxes... -->
+        </div>
+    </div>
+
+    <!-- Groupe de droite : Objectifs de participation -->
+    <div class="col-span-1 sm:col-span-2">
+        <p class="text-lg font-bold">Participation aux activités (plusieurs choix possibles) :</p>
+        <div class="mt-3 space-y-2">
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+
+
+
+
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Développement durable" class="text-red-500">
+                <span class="ml-2">Développement durable</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+            <label class="inline-flex items-center">
+                <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+            </label>
+            <!-- Continue adding more checkboxes... -->
+        </div>
+    </div>
+</div>
+
+
+<!-- 
         <div class="grid grid-cols-4 gap-4">
-            <!-- Groupe de gauche : Centres d'intérêt -->
+     
             <div class="col-span-2">
                 <p class="text-lg font-bold">Comment avez-vous entendu parler du SI-2024 ?:</p>
                 <div class="mt-3 space-y-2">
@@ -225,7 +258,7 @@
                 </div>
             </div>
         
-            <!-- Groupe de droite : Centres d'intérêt 2 -->
+        
             <div class="col-span-2">
                 <p class="text-lg font-bold">Participation aux activités (plusieurs choix possibles) :</p>
                 <div class="mt-3 space-y-2">
@@ -269,11 +302,13 @@
             </div>
         </div>
         
+ -->
+
 
 
 
         <div class="grid grid-cols-4 gap-4">
-            <!-- Groupe de gauche : Centres d'intérêt -->
+          
             <div class="col-span-2">
                 <p class="text-lg font-bold">Êtes-vous de la Diaspora ou un Expatrié ? *:</p>
                 <div class="mt-3 space-y-2">
@@ -297,7 +332,6 @@
                 </div>
             </div>
         
-            <!-- Groupe de droite : Centres d'intérêt 2 -->
            
         </div>
 
@@ -311,7 +345,7 @@
 
         <!-- Submit Button -->
         <div class="text-center">
-            <button type="submit" class="px-10 w-full py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 focus:outline-none">Envoyer</button>
+            <button type="submit" class="px-10 w-full py-3 bg-customPurple text-white font-bold rounded-lg rose ">Envoyer</button>
         </div>
     </form>
 </body>
