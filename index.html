@@ -1,1601 +1,569 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARCHE DE L'ESTHÉTIQUE ET DE LA BEAUTÉ
-    </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digit Communication</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-.hidden { display: none; }
-    .active-tab { }
-    .tablink-jour1.active { background-color:black ; color: white; } /* Orange active */
-    .tablink-jour1:hover { background-color:#fe48a5; color: white; } /* Hover black */
-    .tablink-jour2.active { background-color: #fe48a5; color: white; } /* Black active */
-    .tablink-jour2:hover { background-color: black; color: white; } /* Hover blue */
-
-
-        /* Assurez-vous que la navbar est au-dessus de l'image */
-        .navbar {
-            z-index: 10;
-            transition: background-color 0.8s; /* Animation de la transition */
-            
-        }
-        /* Navbar normale */
-        .navbar-default {
-            background-color: #630234;
-            /* Couleur transparente sur l'image */
-        }
-        /* Navbar fixée au scroll */
-        .navbar-scrolled {
-            background-color: #630234;
-             /* Couleur solide lorsque défilé */
-            height: 15vh;
-        }
-
-      
-        /* Espacement pour éviter que le contenu entre dans la navbar */
-        .content {
-            margin-top: 4rem; /* Ajustez selon la hauteur de votre navbar */
-        }
-        /* Ajustements pour l'image de fond */
-        .hero-image {
-            height: 200vh; /* Ajustez la hauteur selon vos besoins */
-            background-size: cover; /* Couvre toute la section */
-            background-position: center; /* Centre l'image */
-            display: flex; /* Utiliser flexbox pour centrer le contenu */
-            align-items: center; /* Aligne le contenu verticalement */
-            justify-content: center; /* Aligne le contenu horizontalement */
-        }
-        .hero-overlay {
-            position: absolute; /* Superposition sombre */
-            inset: 0; /* Couvre toute la section */
-            background: rgba(0, 0, 0, 0.5); /* Couleur de fond sombre avec opacité */
-        }
-        .hero-content {
-            position: relative; /* Positionner par rapport à l'image */
-            z-index: 10; /* Assure que le texte est au-dessus de la superposition */
-            text-align: center; /* Centre le texte */
-        }
-        /* Ajustements pour centrer le logo et décaler les éléments de la navbar */
-        .navbar-content {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-        .logo {
-            margin-right: auto; /* Pousse le logo vers la gauche */
-            margin-left: 20px; /* Ajustez cette valeur selon vos besoins */
-        }
-        .nav-links {
-            margin-left: auto; /* Pousse les liens vers la droite */
-            margin-right: 20px; /* Ajustez cette valeur selon vos besoins */
-        }
-
-        html {
-    scroll-behavior: smooth;
-}
-
-   /* Modale CSS  */
-        
-            .modal {
-                display: none;
-            }
-            .modal.active {
-                display: flex;
-            }
-
-
-
-            .bg-customPurplet,a:hover {
-    background-color: #67009b;
-  }
-  .text-customPink1 {
-    /* color: #f042a4; */
-    color: #67009b;
-  }
-  .border-customPink2 {
-    border-color: #fe48a5;
-  }
-  
-  .hover:hover{  border-color: #fe48a5}
-  .hove:hover{  border-color: #630234}
-  
-  .bg-customPurple{background: #630234;}
-  .rose{color: #fe48a5;}
-  .rose:hover{background-color: #fe48a5;}
-  .rosebg{background: #fe48a5;}
-  
-  .violet{background: #630234;}
-    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<header class="relative">
-    <!-- Navbar -->
-    <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
-        <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
-            <img src="images/logo fond.jpeg" alt="" srcset=""class="w-24 h-auto">
-            <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-            <div class="hidden md:flex flex-1 justify-center space-x-4">
-                <a href="#Apropos" class="text-white hover:text-white text-lg md:text-xl font-bold">Apropos</a>
-                <a href="#Intervenant" class="text-white  hover:text-white text-lg md:text-xl font-bold">Intervenant</a>
-                <a href="#Reservation" class="text-white  hover:text-white text-lg md:text-xl font-bold">Reservation</a>
-                <a href="#Programme" class="text-white  hover:text-white text-lg md:text-xl font-bold">Programme</a>
-                <a href="exposant.html" class="text-white  hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
-               
-                <a href="#contact" class="text-white  hover:text-white text-lg md:text-xl font-bold">Contact</a>
-            </div>
-        </div>
-    </nav>
-    
-    <!-- Image de Fond (Slider) -->
-    <div class="relative">
-        <div id="slider" class="relative w-full h-[400px] md:h-[800px] overflow-hidden">
-            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/SLIDE2.jpeg');"></div>
-            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
-            <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
-        </div>
+<body class="font-sans antialiased">
 
-        <!-- Overlay et contenu -->
-        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6 p-4 md:p-0">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center"> Marché de l'Esthétique et de la Beauté</h1>
-            
-            <!-- Texte et boutons sous le texte -->
-            <p class="text-lg sm:text-xl md:text-2xl font-bold  text-center"style="color:#fe48a5;">Du 20 au 22 décembre 2024</p>
-
-            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="faq.html" class="bg-customPurple rose active:bg-orange-900 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
-                    FAQ
-                </a> 
-                <a href="accrediter.html" class="bg-customPurple rose active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
-                    ACCREDITATION
-                </a>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Mobile Menu -->
-<!-- Icone de téléphone pour ouvrir le menu mobile -->
-<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
-    <!-- Vous pouvez utiliser une icône de téléphone ou un burger icon pour ouvrir -->
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-    </svg>
-</button>
-
-<!-- Menu mobile caché initialement -->
-<!-- Icone de téléphone pour ouvrir le menu mobile -->
-
-
-<!-- Menu mobile caché initialement -->
-<div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs  shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"style="  background-color: #630234;">
-    <div class="flex flex-col space-y-4 text-center mt-20 p-4">
-        <a href="#Apropos" class="text-white hover:text-black text-lg font-bold ">A Propos</a>
-        <a href="#Intervenant" class="text-white hover:text-black text-lg font-bold">Intervenant</a>
-        <a href="#Reservation" class="text-white  hover:text-white  text-lg font-bold">Reservation</a>
-        <a href="#Programme" class="text-white hover:text-black text-lg font-bold">Programme</a>
-        <a href="exposant.html" class="text-white hover:text-black text-lg font-bold">EXPOSANTS</a>
-       
-        <a href="#contact" class="text-white hover:text-white text-lg font-bold">Contact</a>
-    </div>
-</div>
-
-
-    
-    
-  
-        <section id="Apropos" class="py-12"  >
-            <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <!-- Texte -->
-                <div>
-                    <h2 class="text-xl font-semibold mb-2"style="color: #630234;">À propos du Marché de l'Esthétique et de la Beauté</h2>
-                    <h1 class="text-4xl font-bold mb-4">Bienvenue au Marché de l'Esthétique et de la Beauté</h1>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Le Marché de l'Esthétique et de la Beauté est un événement annuel incontournable qui célèbre l'univers de la beauté, du bien-être et de l'esthétique en Côte d'Ivoire. Prévu pour se tenir du 20 au 22 décembre 2024 à l'Espace CEFCA, à Cocody, cet événement vise à rassembler les professionnels, les marques, et les passionnés du secteur pour trois jours de découvertes, d'innovations et de rencontres.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Le salon offre une plateforme unique où se croisent les dernières tendances, les produits innovants et les services spécialisés dans les domaines de la cosmétique, des soins de beauté, de l'esthétique, de la coiffure, du maquillage et du bien-être. C'est l'occasion idéale pour les visiteurs de découvrir les nouvelles tendances, de participer à des ateliers, et d’échanger avec des experts du secteur.
-                    </p>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Organisé par Newscom Africa, une agence de communication et événementiel réputée, le Marché de l'Esthétique et de la Beauté s'inscrit comme un événement de référence pour tous les acteurs de l'industrie. Que vous soyez un professionnel cherchant à élargir votre réseau ou un amateur passionné, cet événement vous offre une opportunité unique de découvrir et d'expérimenter l'excellence dans le domaine de la beauté et du bien-être.
-                    </p>
-                    <!-- Bouton -->
-                    <a href="#"
-                        class="inline-block bg-customPurple rose text-white text-xl text-bold py-3 px-6 rounded-full mt-4">En savoir plus</a>
-                </div>
-    
-                <!-- Image -->
-                <div class="relative">
-                    <div class="grid grid-cols-2 gap-4">
-                       
-                        <img src="images/Marché de l'esthétique.png" alt="Person 3"
-                            class="col-span-2 rounded-lg shadow-lg">
-                    </div>
-                </div>
-            </div>
-        </section>
-    
-    
-    
-    
-    
-        <!-- Section Événements -->
-        <!-- Section Intervenants -->
-    
-        <section id="Intervenant" class="py-12"style="background:#630234">
-            <div class="container mx-auto px-6">
-                <h2 class="text-center text-white text-3xl font-bold mb-8">LE GRAND RENDEZ-VOUS DE L'ESTHÉTIQUE 2024</h2>
-        
-                <!-- Grille des intervenants -->
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                    <!-- Intervenant 1 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal1')">
-                            <img src="images/INT1.jpeg" alt="Paul-Henry Aithnard" class="rounded-lg w-full h-100 mb-4" />
-                        </a>
-                        <!-- <h5 class="text-white font-semibold text-lg">LE GRAND RENDEZ-VOUS DE L'ESTHÉTIQUE 2024</h5> -->
-                        <!-- <p class="text-white text-sm">LE GRAND RENDEZ-VOUS DE L'ESTHÉTIQUE 2024</p> -->
-                    </div>
-        
-                    <!-- Modal for Intervenant 1 -->
-                    <div id="modal1" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique est l'âme de la beauté ; elle éveille nos sens et apaise nos esprits.</p>
-                            <button onclick="closeModal('modal1')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 2 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal2')">
-                            <img src="images/ms (4).jpeg" alt="Mamadou Touré" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                      
-                    </div>
-        
-                    <!-- Modal for Intervenant 2 -->
-                    <div id="modal2" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique est l'âme de la beauté ; elle éveille nos sens et apaise nos esprits.</p>
-                            <button onclick="closeModal('modal2')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 3 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal3')">
-                            <img src="images/INTE2.jpeg" alt="Laureen Kouassi" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                        
-                    </div>
-        
-                    <!-- Modal for Intervenant 3 -->
-                    <div id="modal3" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique est l'âme de la beauté ; elle éveille nos sens et apaise nos esprits.</p>
-                            <button onclick="closeModal('modal3')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 4 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal4')">
-                            <img src="images/panel echange.jpeg" alt="Ismahill Diaby" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                        
-                       
-                    </div>
-        
-                    <!-- Modal for Intervenant 4 -->
-                    <div id="modal4" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique est l'âme de la beauté ; elle éveille nos sens et apaise nos esprits.</p>
-                            <button onclick="closeModal('modal4')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 5 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal5')">
-                            <img src="images/INTER3.jpeg" alt="Akouba Angela Aggre" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                       
-                    </div>
-        
-                    <!-- Modal for Intervenant 5 -->
-                    <div id="modal5" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"La beauté est dans les yeux de celui qui regarde."</p>
-                            <button onclick="closeModal('modal5')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 6 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal6')">
-                            <img src="images/recruteur.jpeg" alt="Youssouf Carius" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                       
-                    </div>
-        
-                    <!-- Modal for Intervenant 6 -->
-                    <div id="modal6" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"La beauté commence au moment où l'on décide d'être soi-même."</p>
-                            <button onclick="closeModal('modal6')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 7 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal7')">
-                            <img src="images/ms (3).jpeg" alt="Jean-Luc Konan" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                        
-                    </div>
-        
-                    <!-- Modal for Intervenant 7 -->
-                    <div id="modal7" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique n'est pas superficielle ; elle révèle la profondeur d'une vision"</p>
-                            <button onclick="closeModal('modal7')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                    <!-- Intervenant 8 -->
-                    <div class="text-center border border-gray-300 p-2 rounded-lg shadow-lg">
-                        <a href="#" onclick="openModal('modal8')">
-                            <img src="images/INTER4.jpeg" alt="Patricia Zoundi" class="rounded-lg w-full h-auto mb-4" />
-                        </a>
-                        
-                    </div>
-        
-                    <!-- Modal for Intervenant 8 -->
-                    <div id="modal8" class="modal hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-                        <div class="bg-white rounded-lg p-6 w-1/2">
-                            <h3 class="text-black text-xl font-semibold mb-4"> Marché de l'Esthétique et de la Beauté 2024</h3>
-                            <p>"L'esthétique sublime l'ordinaire et rend l'imperfection parfaite."</p>
-                            <button onclick="closeModal('modal8')" class="violet text-white px-4 py-2 rounded mt-4">Fermer</button>
-                        </div>
-                    </div>
-        
-                </div>
-            </div>
-        </section>
-       
-        
+  <nav class="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75 backdrop-blur-md p-6 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo Section -->
+      <div class="text-yellow-400 font-bold text-2xl">
+        <span class="block">digit</span>
+        <span class="block text-xs text-gray-400">communication</span>
+      </div>
       
+      <!-- Hamburger Icon for Small Screens -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-white focus:outline-none">
+          <i class="fas fa-bars"></i> <!-- Font Awesome icon for the hamburger -->
+        </button>
+      </div>
+      
+      <!-- Navigation Links for Desktop -->
+      <ul id="menu" class="hidden md:flex md:space-x-8 text-lg w-full md:w-auto mt-4 md:mt-0">
+        <li><a href="#" class="block md:inline-block hover:text-yellow-400">A propos</a></li>
+       
+        <li class="relative group">
+          <a href="#" class="block md:inline-block hover:text-yellow-400">Services</a>
+          <ul class="absolute hidden group-hover:block bg-black bg-opacity-75 p-4 space-y-2 mt-2">
+            <li><a href="#" class="hover:text-yellow-400">communication stratégique</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Evenementiel</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Nola publicité</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="block md:inline-block hover:text-yellow-400">One Exprès</a></li>
+        <li><a href="#" class="block md:inline-block hover:text-yellow-400">Traffic</a></li>
+        <li><a href="#" class="block md:inline-block hover:text-yellow-400">FAQ</a></li>
+      </ul>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white text-black flex flex-col justify-start p-6">
+      <!-- Flex container for Logo and Menu Items -->
+      <div class="flex justify-between items-center w-full">
+        <!-- Logo at the Top Left in Mobile View -->
+        <div class="text-yellow-400 font-bold text-3xl">
+          <span class="block">digit</span>
+          <span class="block text-sm text-gray-600">communication</span>
+        </div>
         
-      <section id="Reservation"> 
-        <div class="container mx-auto p-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <!-- Section gauche avec les informations de contact -->
-            <div class="text-gray-700">
-                <p class="mb-4">
-                    Pour devenir Partenaire / Sponsor, veuillez contacter l'équipe commerciale.
-                </p>
-                <p class="mb-2">
-                    <strong>Téléphone :</strong> +225 07 87 83 31 04 / +225 07 87 83 31 04
-                </p>
-                <p class="mb-2">
-                    <strong>Email :</strong> infos@marchedelesthetique.com
-                </p>
-                <p class="mb-2">
-                    <strong>Email :</strong> contacts@marchedelesthetique.com
-                </p>
-                <p class="mb-2">
-                    <strong>Email :</strong> sales@marchedelesthetique.com
-                </p>
+        <!-- Close Button or Hamburger Icon for Menu -->
+        <button id="close-menu" class="text-black focus:outline-none">
+          <i class="fas fa-times"></i> <!-- Font Awesome icon for closing the menu -->
+        </button>
+      </div>
+      
+      <!-- Menu Items Stacked Vertically on the Right -->
+      <ul class="mt-8 space-y-6 text-xl text-right">
+        <li><a href="#" class="hover:text-yellow-400">Agence</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Nos Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Service</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Formation</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Blog</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+
+  
+  
+  
+  
+  
+
+  <!-- Hero Section with Background Image -->
+  <section class="bg-hero flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-8xl font-bold text-white uppercase">
+        Bien <span class="text-yellow-400">+</span> Que
+      </h1>
+      <h2 class="text-6xl md:text-8xl font-bold text-yellow-400 mt-4">de la pub</h2>
+    </div>
+  </section>
+
+
+    <!-- Section "Qui sommes-nous" -->
+<section class="bg-black text-white py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl md:text-6xl font-light mb-8">
+        Qui sommes <span class="text-yellow-400 font-bold">nous</span> ?
+      </h2>
+      <p class="text-lg md:text-xl mb-6 max-w-4xl mx-auto">
+        Créée en 2017 en tant qu’Agence de communication digitale, nous sommes désormais une agence de communication 360° basée à Abidjan. Avec une équipe de 25 experts, nous accompagnons nos clients de l’élaboration de leurs stratégies de communication jusqu’à son déploiement. Nous nous sommes donné pour mission de vous offrir bien plus et d’aller au-delà de vos attentes.
+      </p>
+      <p class="text-lg font-light">
+        Opter pour DIGIT COMMUNICATION, c’est opter pour : Plus de créativité, Plus de professionnalisme et Plus de résultats.
+      </p>
+      <p class="mt-4 text-lg font-light">
+        Pour nous, chaque projet est spécifique et mérite donc une attention particulière.
+      </p>
+    </div>
+  </section>
+
+  
+
+
+
+
+
+
+  <!-- Section Services -->
+<section class="bg-white py-16">
+    <div class="container mx-auto text-center">
+      <!-- Titre de la section -->
+      <h2 class="text-4xl font-light mb-10">
+        Bien <span class="text-yellow-400 font-bold">+</span> que du...
+      </h2>
+  
+      <!-- Grille des services -->
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-12">
+  
+        <!-- Service 1 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon1.png" alt="Icone Conseil">
             </div>
-
-            <!-- Section droite avec le formulaire -->
-            <div>
-                <h2 class="text-2xl font-bold text-gray-700 mb-6">Devenez un sponsor ou un partenaire</h2>
-                <form class="space-y-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <!-- Champ nom -->
-                        <input type="text" placeholder="Nom" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-
-                        <!-- Champ prénoms -->
-                        <input type="text" placeholder="Prénoms" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-                    </div>
-
-                    <!-- Choix sponsor ou partenaire -->
-                    <div class="flex items-center space-x-4">
-                        <label class="flex items-center">
-                            <input type="radio" name="role" value="sponsor" class="form-radio h-4 w-4 text-orange-500">
-                            <span class="ml-2 text-gray-700">Sponsor</span>
-                        </label>
-                        <label class="flex items-center">
-                            <input type="radio" name="role" value="partenaire" class="form-radio h-4 w-4 text-orange-500">
-                            <span class="ml-2 text-gray-700">Partenaire</span>
-                        </label>
-                    </div>
-
-                    <!-- Champ société -->
-                    <input type="text" placeholder="Société" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-
-                    <!-- Champ fonction -->
-                    <input type="text" placeholder="Fonction" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-
-                    <!-- Champ numéro de téléphone -->
-                    <input type="text" placeholder="Numéro de téléphone" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-
-                    <!-- Champ email -->
-                    <input type="email" placeholder="Email" class="border border-gray-300 p-3 rounded w-full focus:outline-none focus:ring-2 focus:ring-gray-100">
-
-                    <!-- Champ message -->
-                    <textarea placeholder="Message" class="border border-gray-300 p-3 rounded w-full h-32 focus:outline-none focus:ring-2 focus:ring-gray-100"></textarea>
-
-                    <!-- Bouton envoyer -->
-                    <button type="submit" class="bg-customPurple rose text-white p-2 rounded w-40 font-semibold ">
-                        Envoyer
-                    </button>
-                </form>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Conseils & Stratégies</h3>
+          <p class="text-gray-600 text-sm">
+            Nous vous accompagnons de l’audit à l'élaboration de votre stratégie de communication globale (digital media, hors média).
+          </p>
+        </div>
+  
+        <!-- Service 2 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon2.png" alt="Icone Marketing">
             </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Marketing Digital</h3>
+          <p class="text-gray-600 text-sm">
+            Social Media Marketing, SEO, Publicité digitale, E-mailing, Marketing d'influence...
+          </p>
+        </div>
+  
+        <!-- Service 3 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon3.png" alt="Icone Développement web">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Développement web</h3>
+          <p class="text-gray-600 text-sm">
+            Conception de site web, site e-commerce, application web, etc...
+          </p>
+        </div>
+  
+        <!-- Service 4 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon4.png" alt="Icone Design & Vidéos">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Design & Vidéos</h3>
+          <p class="text-gray-600 text-sm">
+            Identité visuelle, charte graphique, logo, audiovisuel, etc.
+          </p>
+        </div>
+  
+        <!-- Service 5 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon5.png" alt="Icone Evénementiel">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Événementiel</h3>
+          <p class="text-gray-600 text-sm">
+            Notre équipe saura concevoir et promouvoir un événement innovant, créer et valoriser votre image.
+          </p>
+        </div>
+  
+        <!-- Service 6 -->
+        <div class="text-center">
+          <div class="flex justify-center mb-4">
+            <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center">
+              <!-- Icône : insérez votre icône ici -->
+              <img src="images/icon6.png" alt="Icone Média">
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Média</h3>
+          <p class="text-gray-600 text-sm">
+            Media planning, Media Buying, campagnes de publicité (web, presse, radio, affichage, TV).
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="bg-black text-yellow-400 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8">Notre Processus</h2>
+      <div class="relative flex flex-col items-center md:items-start">
+  
+        <!-- SVG Courbe (visible uniquement sur les écrans md et plus grands) -->
+        <svg class="absolute w-full h-32 hidden md:block" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+          <path d="M0 50 Q 250 100 500 50 T1000 50" fill="none" stroke="#FACC15" stroke-width="4"/>
+        </svg>
+  
+        <!-- Etapes du processus -->
+        <div class="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 z-10">
+  
+          <!-- Étape 1 -->
+          <div class="flex flex-col items-center">
+            <div class="w-24 h-24 rounded-full bg-yellow-400 flex items-center justify-center">
+              <span class="text-black font-bold text-2xl">1</span>
+            </div>
+            <p class="mt-4 max-w-xs text-center">
+              Chez nous, chaque projet est soigneusement planifié avec des experts.
+            </p>
+          </div>
+  
+          <!-- Étape 2 -->
+          <div class="flex flex-col items-center">
+            <div class="w-24 h-24 rounded-full bg-yellow-400 flex items-center justify-center">
+              <span class="text-black font-bold text-2xl">2</span>
+            </div>
+            <p class="mt-4 max-w-xs text-center">
+              Nous effectuons une analyse approfondie pour définir les objectifs.
+            </p>
+          </div>
+  
+          <!-- Étape 3 -->
+          <div class="flex flex-col items-center">
+            <div class="w-24 h-24 rounded-full bg-yellow-400 flex items-center justify-center">
+              <span class="text-black font-bold text-2xl">3</span>
+            </div>
+            <p class="mt-4 max-w-xs text-center">
+              Nous implémentons des solutions sur mesure et innovantes.
+            </p>
+          </div>
+  
+          <!-- Étape 4 -->
+          <div class="flex flex-col items-center">
+            <div class="w-24 h-24 rounded-full bg-yellow-400 flex items-center justify-center">
+              <span class="text-black font-bold text-2xl">4</span>
+            </div>
+            <p class="mt-4 max-w-xs text-center">
+              Nous assurons le suivi et l'amélioration continue des résultats.
+            </p>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="bg-gray-100 mt-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Quelques réalisations</h2>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 1" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 2" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <img src="images/ulistre (14).jpeg" alt="Réalisation 3" class="rounded shadow-md hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openModal('images/ulistre (14).jpeg')">
+            <!-- Ajoutez plus d'images ici -->
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="fixed inset-0 bg-black bg-opacity-75 flex  items-center justify-center hidden z-50">
+        <div class="relative">
+            <span class="absolute top-0 right-0 p-2 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="Réalisation" class="max-w-full max-h-screen object-cover rounded-lg shadow-lg">
         </div>
     </div>
 </section>
-       
-        <main class="container mx-auto py-8 px-4">
-            <!-- Section A propos + Boutons -->
-             <section id="Programme">
-                <div class=" mb-4">
-                    <div class="p-4">
-                        <h2 class="text-xl font-bold text-orange-500 mb-4"style="  color: #630234;">
-                            À propos du MEB<br>
-                            <span class="text-xl font-bold "tyle="  color: #630234;">Programme</span>
-                        </h2>
-                        <div class="flex flex-wrap justify-center space-x-2">
-                            <button id="tab1" class="tablink-jour1 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold hover:bg-black  mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour1', 'tab1')"style="background-color: #630234;">Jour 1 <br> 20 décembre 2024 </button>
-
-                            <button id="tab2" class="tablink-jour2 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour2', 'tab2')"style="background:#fe48a5;">Jour 2 <br> 21 décembre 2024 </button>
-
-                            <button id="tab3" class="tablink-jour3 px-4 py-2 rounded-lg border border-gray-100 text-white text-base md:text-xl font-bold bg-blue-800 mb-2 md:mb-0 md:w-auto w-full" onclick="openTab(event, 'jour3', 'tab3')"style="background-color:#630234">Jour 3 <br> 22 décembre 2024</button>
-                        </div>
-                    </div>
-                    
-             
-           
-        
-            <!-- Contenu des Tabs -->
-            <div id="jour1" class="tabcontent ">
-              
-              <!-- Event 1 -->
-              <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">7h00 - 8h30</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Préparation et Installation</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-            
-
-              <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">7h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Ouverture des portes pour les exposants et les équipes techniques.	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-            
 
 
-              <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-    <div class="flex items-start space-x-4">
-        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-        <div class="flex-1">
-            <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                </svg>
-                <span class="text-lg font-medium">7h15  </span>
-            </div>
-            <p class="text-gray-700 text-3xl font-bold mb-2"> Vérification des stands, tests techniques (son, lumière, vidéos).</p>
-            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-        </div>
+<!-- section equipe -->
+
+<section class="mt-4">
+  <h2 class="text-3xl font-bold text-center mb-8">Nos Equipes</h2>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <!-- Indicateurs (les petits points) -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-</div>
-
-             <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-    <div class="flex items-start space-x-4">
-        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-        <div class="flex-1">
-            <div class="flex items-center mb-2">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                </svg>
-                <span class="text-lg font-medium">8h00  </span>
-            </div>
-            <p class="text-gray-700 text-3xl font-bold mb-2"> Briefing de l’équipe d’accueil et des volontaires (distribution des rôles).</p>
-            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-        </div>
-    </div>
-</div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">8h15</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Derniers ajustements des stands, mise en place des échantillons et produits promotionnels.</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">9h00 - 10h00</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2"> Accueil des Participants	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">09h00</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Ouverture officielle des portes pour les visiteurs.				
-                            Accueil des premiers visiteurs (distribution de guides, cartes du salon et sacs cadeaux).	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">09h30</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Cérémonie d’ouverture officielle				
-                            Allocution d’ouverture par les organisateurs et les invités d’honneur	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">10h00 - 12h00</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Début des Conférences et Ateliers</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">10h00</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Inauguration officielle par un discours de bienvenue (par les organisateurs ou une personnalité invitée) : "Les nouvelles tendances de l’esthétique et de la beauté en Afrique"				
-                            Interventions d'experts et de professionnels du secteur</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-            </div>
-
-
-
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">10h30 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Début des démonstrations en direct sur des stands spécifiques (ex : maquillage, soins de la peau).</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">11h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">: Premier atelier interactif pour les visiteurs (ex : "Techniques de massage facial").	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">12h00 - 13h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Pause Déjeuner</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">12h00 – 13h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Visite des stands et des exposants	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">13h00 – 14h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">14h00 - 18h00 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Ateliers Pratiques et Démonstrations	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">14h00</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Atelier pratique : "Maquillage professionnel et astuces beauté"</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">15h30 </span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2">Démonstration : "Coiffure afro et soins capillaires naturels</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                <div class="flex items-start space-x-4">
-                    <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                    <div class="flex-1">
-                        <div class="flex items-center mb-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                            </svg>
-                            <span class="text-lg font-medium">16h30</span>
-                        </div>
-                        <p class="text-gray-700 text-3xl font-bold mb-2"> Networking & Rencontres B2B entre professionnels et marques de beauté	</p>
-                        <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                    </div>
-                </div>
-       </div>
-        </div>
     
-           
+    <!-- Images du carousel avec une largeur réduite et centrées -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/icon1.png" class="d-block w-25 mx-auto" alt="Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="images/ulistre (14).jpeg" class="d-block w-25 mx-auto" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="images/icon3.png" class="d-block w-25 mx-auto" alt="Image 3">
+      </div>
+    </div>
+  </div>
+  
+  
+</section>
+ <!-- section equipe fini -->
+
+
+
+
+
+
+<!-- section partenaire -->
+<section class="mt-4">
+  <!-- Parent container for the section -->
+  <div class="bg-yellow-500 py-16">
+    <!-- Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800">Ils ont été bien <span class="text-yellow-200">plus que satisfaits</span></h2>
+    </div>
+    
+    <!-- Grid of partner logos -->
+    <div class="max-w-xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4 items-center">
+      <!-- Logo 1 -->
+      <div class="flex justify-center">
+        <img src="images/logopartenaire.webp" alt="Partner 1" class="h-12">
+      </div>
+      
+      <!-- Logo 2 -->
+      <div class="flex justify-center">
+        <img src="images/parte.webp" alt="Partner 2" class="h-12">
+      </div>
+  
+      <!-- Logo 3 -->
+      <div class="flex justify-center">
+        <img src="images/logopartenaire.webp" alt="Partner 1" class="h-12">
+      </div>
+  
+      <!-- Logo 4 -->
+      <div class="flex justify-center">
+        <img src="images/parte.webp" alt="Partner 4" class="h-12">
+      </div>
+  
+      <!-- Logo 5 -->
+      <div class="flex justify-center">
+        <img src="images/part.webp" alt="Partner 5" class="h-12">
+      </div>
+  
+      <!-- Logo 6 -->
+      <div class="flex justify-center">
+        <img src="images/parte.webp" alt="Partner 6" class="h-12">
+      </div>
+
+      <!-- Continue for more logos as needed... -->
+    </div>
+  </div>
+</section>
+
+<!-- section partenaire fini -->
+
+
+
+
+
+
+
+
+<!-- section recent article -->
+
+<div class="bg-white py-12">
+  <div class="text-center mb-6">
+    <h2 class="text-3xl font-bold text-gray-800">Nos récents <span class="text-yellow-500">articles</span></h2>
+    <div class="border-t-2 border-gray-300 w-12 mx-auto mt-4"></div>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-6">
+    <!-- Card 1 -->
+    <div class="max-w-xs bg-white border-2 border-yellow-500 rounded-lg shadow-md">
+      <img class="w-full h-48 object-cover" src="images/equipe.webp" alt="Article 1">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Comment réussir avec succès l'implémentation ?</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-4 bg-yellow-500 text-white py-2 px-4 rounded">Lire plus</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="max-w-xs bg-white border-2 border-yellow-500 rounded-lg shadow-md">
+      <img class="w-full h-48 object-cover" src="images/equpe.webp" alt="Article 2">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">Comment évaluer les performances de communication ?</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-4 bg-yellow-500 text-white py-2 px-4 rounded">Lire plus</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="max-w-xs bg-white border-2 border-yellow-500 rounded-lg shadow-md">
+      <img class="w-full h-48 object-cover" src="images/eq.webp" alt="Article 3">
+      <div class="p-4">
+        <h3 class="text-lg font-semibold mb-2">L'IA dans la création de contenu...</h3>
+        <p class="text-gray-600">Lorem ipsum dolor sit amet...</p>
+        <button class="mt-4 bg-yellow-500 text-white py-2 px-4 rounded">Lire plus</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- section nos recents article fini -->
+
+
+<!-- SECTION FORMULAIRE -->
+
+<div class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto flex flex-wrap items-center">
+    <!-- Left side: Title and description -->
+    <div class="w-full lg:w-1/2 px-4">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4">Un besoin ?</h2>
+      <p class="text-lg text-gray-600 mb-8">Nous pouvons répondre à toutes vos demandes de formation et consultation.</p>
+    </div>
+
+    <!-- Right side: Form -->
+    <div class="w-full lg:w-1/2 px-4">
+      <form class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 font-bold">Nom et prénom</label>
+          <input type="text" id="name" class="w-full border-2 border-gray-300 p-3 rounded focus:border-yellow-500" placeholder="Entrez votre nom et prénom">
+        </div>
+
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 font-bold">Email</label>
+          <input type="email" id="email" class="w-full border-2 border-gray-300 p-3 rounded focus:border-yellow-500" placeholder="Entrez votre email">
+        </div>
+
+        <div class="mb-4">
+          <label for="message" class="block text-gray-700 font-bold">Votre message</label>
+          <textarea id="message" class="w-full border-2 border-gray-300 p-3 rounded focus:border-yellow-500" rows="5" placeholder="Décrivez votre besoin"></textarea>
+        </div>
+
+        <button class="bg-yellow-500 text-white py-3 px-8 w-100 rounded-lg hover:bg-yellow-600">Envoyer</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+  <!-- Chat Widget -->
+  <!-- <div class="fixed bottom-5 right-5 bg-white p-4 rounded-full shadow-lg">
+    <div class="flex items-center">
+      <img src="images/ulistre (14).jpeg" alt="Avatar" class="w-10 h-10 rounded-full mr-3">
+      <p class="text-sm">Salut, vous avez des questions ? Je me ferai un plaisir de vous aider.</p>
+    </div>
+  </div> -->
+
+
+
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Column 1: Company Info -->
+        <div>
+          <h3 class="text-white text-xl font-semibold mb-4">Digit Communication</h3>
+          <p class="mb-4">Leading communication and marketing services provider in the region.</p>
+          <p>© 2024 Digit Communication. All rights reserved.</p>
+        </div>
         
-
-
-
-
-
-
-
-            <section id="jour2" class="tabcontent hidden">
-                <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h00 - 8h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Préparation et Installation</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Ouverture des portes pour les exposants et les équipes techniques.</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h15</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Vérification des stands, tests techniques (son, lumière, vidéos).</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">8h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Briefing de l’équipe d’accueil et des volontaires (distribution des rôles).</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">8h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Derniers ajustements des stands, mise en place des échantillons et produits promotionnels</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">9h00 - 09h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Le Accueil des Participants</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Accueil des participants et visites des stands	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h30 - 12h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Début des Conférences et Ateliers</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h30 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Conférence thématique : "La cosmétique naturelle et les produits bio : une révolution en marche</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">11h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Atelier : "Soins du visage et techniques anti-âge"	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">12h00 - 13h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Pause Déjeuner</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">12h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Pause déjeuner et visites des stands	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">13h00 - 18h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Ateliers Pratiques, Défilés de mode et Démonstrations</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">13h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Masterclass : "Secrets d’un teint parfait : routine et soins adaptés à chaque type de peau"</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">15h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Table ronde : "Le rôle du digital dans la promotion des marques de beauté en Afrique</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hove transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">16h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">  Défilé de mode et démonstration de maquillage de soirée	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-
-
-            <section id="jour3" class="tabcontent hidden">
-                <div class="p-4 border-8 border-gray-300 rounded-lg  hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h00 - 8h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Préparation et Installation	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Ouverture des portes pour les exposants et les équipes techniques. </p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">7h15 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Vérification des stands, tests techniques (son, lumière, vidéos).</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">8h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">briefing de l’équipe d’accueil et des volontaires (distribution des rôles).</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">8h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Derniers ajustements des stands, mise en place des échantillons et produits promotionnels</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">9h00 - 09h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Accueil des Participants</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2"> Accueil des participants et visites des stands</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h30 - 12h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Début des Conférences et Atelier</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">09h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Conférence : "Développement durable et beauté : vers une industrie plus responsable"</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">11h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Atelier : "Manucure, pédicure et soins des mains et des pieds"</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">12h00 - 13h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Pause Déjeuner</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">12h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Pause déjeuner et échanges entre participants</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">14h00 - 18h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Ateliers Pratiques, Défilés de mode et Démonstrations</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">14h00 </span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Concours de maquillage et coiffure : "Le talent ivoirien à l’honneur"</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">15h30</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Remise des prix et cérémonie de clôture officielle	</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 border-8 border-gray-300 rounded-lg hover transition-colors duration-300 mb-6 bg-white shadow-lg">
-                    <div class="flex items-start space-x-4">
-                        <img src="images/WhatsApp Image 2024-09-16 at 17.35.14.jpeg" alt="" class="w-20 h-20 object-cover rounded-md">
-                        <div class="flex-1">
-                            <div class="flex items-center mb-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-500 mr-2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 4.5a7.5 7.5 0 107.5 7.5A7.5 7.5 0 0012 4.5z" />
-                                </svg>
-                                <span class="text-lg font-medium">17h00</span>
-                            </div>
-                            <p class="text-gray-700 text-3xl font-bold mb-2">Cocktail de clôture et networking</p>
-                            <span class="text-lg text-center">Bienvenue Au Marché de l'Esthétique et de la Beauté   </span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-        </section>
-
-            <section class="bg-gray-100 py-8">
-                <h3 class="text-3xl text-center font-bold p-4">Co-host</h3> <br>
-                <div class="container mx-auto flex justify-center">
-                    <div class="w-full max-w-xs">
-                        <img src="images/djamo.png" alt="Co-host" class="w-full h-auto rounded-lg shadow-lg">
-                    </div>
-                </div>
-            </section>
-            
-
-         
-
-            <section class="bg-white py-8">
-                <h3 class="text-3xl text-center font-bold p-4">Partenaires</h3>
-                <div class="container mx-auto mt-8">
-                    <!-- Grille de Cartes 4x4 -->
-                    <div class="grid grid-cols-3 gap-2">
-                        <!-- Carte 1 -->
-                        <div >
-                            <img src="images/part (1).jpeg" alt="Image 1" class="w-full h-40 object-center  object-contain  rounded-md mb-4">
-                           
-                        </div>
-                        <div >
-                            <img src="images/part (2).jpeg" alt="Image 1" class="w-full h-40 object-center  object-contain rounded-md mb-4">
-                           
-                        </div>
-                        <!-- Carte 2 -->
-                        <div >
-                            <img src="images/part (3).jpeg" alt="Image 2" class="w-full h-40 object-center   rounded-md mb-4">
-                           
-                        </div>
-                        <!-- Carte 3 -->
-                        
-                        
-                        <!-- Répétez ces blocs pour les cartes restantes -->
-                    </div>
-                </div>
-            </section>
-            
-
-
-
-            <section id="contact" class="container mx-auto py-16">
-                <!-- Contact Info Section -->
-                <div class="text-center">
-                    <p class="text-customPink1 font-bold">Contact</p>
-                    <h2 class="text-4xl font-extrabold text-gray-900">Contact Info</h2>
-                    <hr class="w-16 my-2 mx-auto border-t-2 border-gray-300">
-                </div>
-            
-                <!-- Layout for Address/Email and Contact Form -->
-                <div class="flex flex-col md:flex-row md:space-x-8 mt-12">
-                    <!-- Address and Email Section -->
-                    <div class="flex-1 md:w-1/3 mb-8 md:mb-0">
-                        <!-- Address -->
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center mb-8">
-                            <div class="text-yellow-400 mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12 2C8.69 2 6 4.69 6 8c0 5.2 6 13 6 13s6-7.8 6-13c0-3.31-2.69-6-6-6zm0 9.5c-1.93 0-3.5-1.57-3.5-3.5S10.07 4.5 12 4.5s3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Adresse postale</h3>
-                            <p class="text-gray-600">Espace CEFCA, Cocody, près de la CNPS de Djibi</p>
-                            <p class="text-gray-600">01 BP 11513 Abidjan 01</p>
-                        </div>
-                        
-                        <!-- Email -->
-                        <div class="bg-gray-50 p-8 rounded-lg shadow-md text-center">
-                            <div class="text-green-400 mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 mx-auto" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M21 8V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v2l9 4.5L21 8zM5 10v8h14v-8l-7 3.5L5 10z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Emails</h3>
-                            <p class="text-gray-600">infos@marchedelesthetique.com</p>
-                            <p class="text-gray-600">contacts@marchedelesthetique.com</p>
-                            <p class="text-gray-600">sales@marchedelesthetique.com</p>
-                        </div>
-                    </div>
-            
-                    <!-- Contact Form Section -->
-                    <div class="flex-1 md:w-2/3">
-                        <div class="text-center mb-8">
-                            <p class="text-customPink1 text-2xl text-bold">Contactez-nous</p>
-                            <h3 class="text-3xl font-bold text-gray-900">Laissez-nous un message.</h3>
-                            <hr class="w-16 my-2 mx-auto border-t-2 border-gray-300">
-                        </div>
-            
-                        <div class="max-w-2xl mx-auto">
-                            <form action="#" method="POST" class="space-y-6">
-                                <div>
-                                    <input type="text" name="name" placeholder="Nom et Prénoms" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
-                                </div>
-                                <div>
-                                    <input type="email" name="email" placeholder="Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent">
-                                </div>
-                                <div>
-                                    <textarea name="message" rows="4" placeholder="Message" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-600 focus:border-transparent"></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit" class="bg-customPurple rose text-white font-bold py-3 px-8 rounded-lg">ENVOYER</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-
-
-
-
-
-
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-500">Home</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Services</a></li>
+            <li><a href="#" class="hover:text-yellow-500">About Us</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Contact</a></li>
+          </ul>
+        </div>
         
+        <!-- Column 3: Services -->
+        <div>
+          <h4 class="text-white text-lg font-semibold mb-4">Our Services</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-yellow-500">Digital Marketing</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Branding</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Content Creation</a></li>
+            <li><a href="#" class="hover:text-yellow-500">Consulting</a></li>
+          </ul>
+        </div>
         
+        <!-- Column 4: Contact & Social Media -->
+        <div>
+          <h4 class="text-white text-lg font-semibold mb-4">Contact Us</h4>
+          <p class="mb-4">Address: Abidjan, Côte d'Ivoire</p>
+          <p class="mb-4">Phone: +225 00 00 00 00</p>
+          <p>Email: contact@digitcommunication.ci</p>
+          
+          <!-- Social Media Icons -->
+          <div class="mt-4 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-yellow-500">
+              <i class="fab fa-facebook-f"></i> <!-- Facebook Icon -->
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-500">
+              <i class="fab fa-twitter"></i> <!-- Twitter Icon -->
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-500">
+              <i class="fab fa-linkedin-in"></i> <!-- LinkedIn Icon -->
+            </a>
+            <a href="#" class="text-gray-400 hover:text-yellow-500">
+              <i class="fab fa-instagram"></i> <!-- Instagram Icon -->
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript to toggle the mobile menu -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenu = document.getElementById('close-menu');
 
+  // Open the mobile menu
+  menuToggle.addEventListener('click', function () {
+    mobileMenu.classList.remove('hidden');  // Show the menu
+  });
 
-
-
-
-
-
-
-
-
-        </main>
-
-
-
-
-
-        <footer class="text-white text-center p-6 mt-8" style="background: #630234;">
-            <div class="flex justify-center space-x-6 mb-4">
-              <a href="https://www.facebook.com/profile.php?id=61566369625840" target="_blank" class="text-white hover:text-gray-400">
-                <i class="fab fa-facebook-f text-lg"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank" class="text-white hover:text-gray-400">
-                <i class="fab fa-twitter text-lg"></i>
-              </a>
-              <a href="https://instagram.com" target="_blank" class="text-white hover:text-gray-400">
-                <i class="fab fa-instagram text-lg"></i>
-              </a>
-              <a href="https://linkedin.com" target="_blank" class="text-white hover:text-gray-400">
-                <i class="fab fa-linkedin-in text-lg"></i>
-              </a>
-            </div>
-            <p class="text-sm">&copy; 2024 Marché de l'Esthétique et de la Beauté. Tous droits réservés.</p>
-          </footer>
-
-       
+  // Close the mobile menu
+  closeMenu.addEventListener('click', function () {
+    mobileMenu.classList.add('hidden');  // Hide the menu
+  });
+</script>
+<script src="js/script.JS"></script>
 </body>
 </html>
-<!-- <script>
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
-            navbar.classList.remove('navbar-default');
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-            navbar.classList.add('navbar-default');
-        }
-    });
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Lorsque l'icône de menu est cliquée, basculer l'animation
-    menuToggle.addEventListener('click', function() {
-        // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
-        if (mobileMenu.classList.contains('translate-x-full')) {
-            mobileMenu.classList.remove('translate-x-full');
-            mobileMenu.classList.add('translate-x-0');
-        } else {
-            // Ajouter 'translate-x-full' pour cacher à nouveau le menu
-            mobileMenu.classList.add('translate-x-full');
-            mobileMenu.classList.remove('translate-x-0');
-        }
-    });
-
-    function openTab(evt, tabName, tabId) {
-      var i, tabcontent, tablinks;
-      
-      // Hide all tab contents
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].classList.add("hidden");
-      }
-
-      // Remove active class from all buttons
-      tablinks = document.getElementsByTagName("button");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].classList.remove("active");
-      }
-
-      // Show current tab and activate its button
-      document.getElementById(tabName).classList.remove("hidden");
-      document.getElementById(tabId).classList.add("active");
-    }
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenu.classList.toggle('hidden');
-        });
-
-
-        const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
-
-
-    // modale description
-
-    function openModal(modalId) {
-        document.getElementById(modalId).classList.remove('hidden');
-    }
-
-    function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
-        
-        }
-</script> -->
-
-<script>
-    window.addEventListener('scroll', function() {
-        const navbar = document.getElementById('navbar');
-        if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
-            navbar.classList.remove('navbar-default');
-            navbar.classList.add('navbar-scrolled');
-        } else {
-            navbar.classList.remove('navbar-scrolled');
-            navbar.classList.add('navbar-default');
-        }
-    });
-
-    const menuToggle = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    // Lorsque l'icône de menu est cliquée, basculer l'animation
-    menuToggle.addEventListener('click', function() {
-        // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
-        if (mobileMenu.classList.contains('translate-x-full')) {
-            mobileMenu.classList.remove('translate-x-full');
-            mobileMenu.classList.add('translate-x-0');
-        } else {
-            // Ajouter 'translate-x-full' pour cacher à nouveau le menu
-            mobileMenu.classList.add('translate-x-full');
-            mobileMenu.classList.remove('translate-x-0');
-        }
-    });
-
-    function openTab(evt, tabName, tabId) {
-        var i, tabcontent, tablinks;
-        
-        // Hide all tab contents
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].classList.add("hidden");
-        }
-
-        // Remove active class from all buttons
-        tablinks = document.getElementsByTagName("button");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active");
-        }
-
-        // Show current tab and activate its button
-        document.getElementById(tabName).classList.remove("hidden");
-        document.getElementById(tabId).classList.add("active");
-    }
-
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
-
-    function showSlide(index) {
-        slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-        });
-    }
-
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-    }
-
-    setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
-
-    // Modale description
-    function openModal(modalId) {
-        document.getElementById(modalId).classList.remove('hidden');
-    }
-
-    function closeModal(modalId) {
-        document.getElementById(modalId).classList.add('hidden');
-    }
-</script>
