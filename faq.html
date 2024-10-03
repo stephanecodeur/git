@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>FAQ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* CSS existant */
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .page-container {
+            background-color: #630234;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px; /* Augmenté pour laisser plus d'espace */
+            min-height: 100vh;
+        }
+
+        .faq-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            width: 100%;
+            max-width: 800px; /* Augmenté pour laisser plus d'espace */
+            margin-top: 50px; /* Espace entre le header et la FAQ */
+            box-sizing: border-box;
+        }
+
+        .faq-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #fe48a5;
+        }
+
+        .faq-symbol {
+            margin-right: 10px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding-top: 10px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #630234;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px; /* Ajouté pour espacer le footer du contenu */
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 15px;
+                max-width: 100%;
+            }
+        }
+
+
+        .hidden { display: none; }
+    .active-tab { }
+    .tablink-jour1.active { background-color:black ; color: white; } /* Orange active */
+    .tablink-jour1:hover { background-color:#fe48a5; color: white; } /* Hover black */
+    .tablink-jour2.active { background-color: #fe48a5; color: white; } /* Black active */
+    .tablink-jour2:hover { background-color: black; color: white; } /* Hover blue */
+
+
+        /* Assurez-vous que la navbar est au-dessus de l'image */
+        .navbar {
+            z-index: 10;
+            transition: background-color 0.8s; /* Animation de la transition */
+            
+        }
+        /* Navbar normale */
+        .navbar-default {
+            background-color: #630234;
+            /* Couleur transparente sur l'image */
+        }
+        /* Navbar fixée au scroll */
+        .navbar-scrolled {
+            background-color: #630234;
+             /* Couleur solide lorsque défilé */
+            height: 15vh;
+        }
+
+      
+        /* Espacement pour éviter que le contenu entre dans la navbar */
+        .content {
+            margin-top: 4rem; /* Ajustez selon la hauteur de votre navbar */
+        }
+        /* Ajustements pour l'image de fond */
+        .hero-image {
+            height: 200vh; /* Ajustez la hauteur selon vos besoins */
+            background-size: cover; /* Couvre toute la section */
+            background-position: center; /* Centre l'image */
+            display: flex; /* Utiliser flexbox pour centrer le contenu */
+            align-items: center; /* Aligne le contenu verticalement */
+            justify-content: center; /* Aligne le contenu horizontalement */
+        }
+        .hero-overlay {
+            position: absolute; /* Superposition sombre */
+            inset: 0; /* Couvre toute la section */
+            background: rgba(0, 0, 0, 0.5); /* Couleur de fond sombre avec opacité */
+        }
+        .hero-content {
+            position: relative; /* Positionner par rapport à l'image */
+            z-index: 10; /* Assure que le texte est au-dessus de la superposition */
+            text-align: center; /* Centre le texte */
+        }
+        /* Ajustements pour centrer le logo et décaler les éléments de la navbar */
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .logo {
+            margin-right: auto; /* Pousse le logo vers la gauche */
+            margin-left: 20px; /* Ajustez cette valeur selon vos besoins */
+        }
+        .nav-links {
+            margin-left: auto; /* Pousse les liens vers la droite */
+            margin-right: 20px; /* Ajustez cette valeur selon vos besoins */
+        }
+
+        html {
+    scroll-behavior: smooth; }
+
+
+    .bg-customPurplet,a:hover {
+    background-color: #67009b;
+  }
+  .text-customPink1 {
+    /* color: #f042a4; */
+    color: #67009b;
+  }
+  .border-customPink2 {
+    border-color: #fe48a5;
+  }
+  
+  .hover:hover{  border-color: #fe48a5}
+  .hove:hover{  border-color: #630234}
+  
+  .bg-customPurple{background: #630234;}
+  .rose{color: #fe48a5;}
+  .rose:hover{background-color: #fe48a5;}
+  .rosebg{background: #fe48a5;}
+  
+  .violet{background: #630234;}
+    </style>
+</head>
+
+<body>
+    <header class="relative">
+        <!-- Navbar -->
+        <nav id="navbar" class="fixed top-0 left-0 w-full bg-opacity-50 text-white p-4 navbar navbar-default">
+            <div class="navbar-content container mx-auto flex flex-wrap items-center justify-between">
+                <img src="images/logo fond.jpeg" alt="" srcset=""class="w-24 h-auto">
+                <button class="text-2xl md:hidden focus:outline-none" id="menu-toggle">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <div class="hidden md:flex flex-1 justify-center space-x-4">
+                    <a href="#Apropos" class="text-white hover:text-white text-lg md:text-xl font-bold">Apropos</a>
+                    <a href="#Intervenant" class="text-white  hover:text-white text-lg md:text-xl font-bold">Intervenant</a>
+                    <a href="#Reservation" class="text-white  hover:text-white text-lg md:text-xl font-bold">Reservation</a>
+                    <a href="#Programme" class="text-white  hover:text-white text-lg md:text-xl font-bold">Programme</a>
+                    <a href="exposant.html" class="text-white  hover:text-white text-lg md:text-xl font-bold">EXPOSANTS</a>
+                   
+                    <a href="#contact" class="text-white  hover:text-white text-lg md:text-xl font-bold">Contact</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Image de Fond (Slider) -->
+        <div class="relative">
+            <div id="slider" class="relative w-full h-[400px] md:h-[800px] overflow-hidden">
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-100" style="background-image: url('images/SLIDE2.jpeg');"></div>
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
+                <div class="slide absolute inset-0 bg-cover bg-center transition-opacity duration-700 opacity-0" style="background-image: url('images/SLIDE2.jpeg');"></div>
+            </div>
+    
+            <!-- Overlay et contenu -->
+            <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center space-y-6 p-4 md:p-0">
+                <h1 class="text-2xl sm:text-3xl md:text-4xl text-white font-bold text-center"> Bienvenue sur l'Espace Média</h1>
+                
+                <!-- Texte et boutons sous le texte -->
+                <p class="text-lg sm:text-xl md:text-2xl font-bold  text-center"style="color:#fe48a5;">Du 20 au 22 décembre 2024</p>
+      
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="badge.html" class="bg-customPurple rose active:bg-orange-900 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                        FAQ
+                    </a> 
+                    <a href="index.html" class="bg-customPurple rose active:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md transition-colors duration-300 w-full sm:w-auto text-center">
+                        Retour
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Mobile Menu -->
+<!-- Icone de téléphone pour ouvrir le menu mobile -->
+<button id="menu-toggle" class="md:hidden p-4 focus:outline-none">
+    <!-- Vous pouvez utiliser une icône de téléphone ou un burger icon pour ouvrir -->
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+  </button>
+
+
+
+
+    <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-3/4 max-w-xs  shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out"style="  background-color: #630234;">
+        <div class="flex flex-col space-y-4 text-center mt-20 p-4">
+            <a href="#Apropos" class="text-white hover:text-black text-lg font-bold ">A Propos</a>
+            <a href="#Intervenant" class="text-white hover:text-black text-lg font-bold">Intervenant</a>
+            <a href="#Reservation" class="text-white  hover:text-white  text-lg font-bold">Reservation</a>
+            <a href="#Programme" class="text-white hover:text-black text-lg font-bold">Programme</a>
+            <a href="exposant.html" class="text-white hover:text-black text-lg font-bold">EXPOSANTS</a>
+           
+            <a href="#contact" class="text-white hover:text-white text-lg font-bold">Contact</a>
+        </div>
+      </div>
+
+
+
+
+    <!-- FAQ Section -->
+    <div class="page-container">
+        <div class="faq-container">
+            <h1 class="text-bold text-2xl text-customPink1">FAQ</h1>
+
+            <!-- Duplication des questions jusqu'à 15 -->
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Qu'est-ce que le Marché de l'Esthétique et de la Beauté ?*
+                </div>
+                <div class="faq-answer">
+                    Le Marché de l'Esthétique et de la Beauté est un événement réunissant les professionnels du secteur de la beauté et de l'esthétique, des entreprises, des exposants, ainsi que des experts qui animeront des panels. L'événement propose des démonstrations, des ventes de produits et des discussions sur les dernières tendances et innovations dans l'industrie de la beauté.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quand et où se tiendra l'événement ?*
+                </div>
+                <div class="faq-answer">
+                    L'événement se déroulera à Angré DJIBI, Espace CEFCA, du 20 au 22 décembre 2024.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quels types d'exposants seront présents ?*
+                </div>
+                <div class="faq-answer">
+                    Des entreprises et marques spécialisées dans les cosmétiques, les soins capillaires, les équipements esthétiques, les produits de bien-être, ainsi que des salons de beauté seront présents. Des experts offriront des démonstrations et des conseils.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quels panels et ateliers seront proposés ?*
+                </div>
+                <div class="faq-answer">
+                    Des panels sur des thèmes tels que les innovations dans le maquillage, les soins de la peau, l'entrepreneuriat dans le secteur de la beauté et des ateliers pratiques seront organisés tout au long des trois jours.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Comment puis-je participer en tant qu'exposant ?*
+                </div>
+                <div class="faq-answer">
+                    Pour participer en tant qu'exposant, vous pouvez réserver un stand en nous contactant via notre site web ou par téléphone. Il existe trois types de stands disponibles, avec des tarifs en fonction de la taille, du confort et de l’emplacement.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    Quels sont les coûts des stands ?*
+                </div>
+                <div class="faq-answer">
+                    Nous proposons trois types de stands :
+                    - *Stand de 250 000 FCFA* : Taille standard avec confort de base et emplacement en zone générale.
+                    - *Stand de 350 000 FCFA* : Taille moyenne avec confort amélioré et emplacement favorable.
+                    - *Stand de 500 000 FCFA* : Grande taille, confort premium et emplacement stratégique pour une meilleure visibilité.
+
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Comment puis-je m'inscrire aux panels ou ateliers ?*
+                </div>
+                <div class="faq-answer">
+                    Les inscriptions aux panels et ateliers se feront en ligne via notre site web. Nous vous conseillons de vous inscrire à l'avance, car les places sont limitées.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *L'entrée à l'événement est-elle gratuite ?*
+                </div>
+                <div class="faq-answer">
+                    L'entrée est gratuite pour le grand public. Toutefois, certaines activités spécifiques comme les ateliers et les conférences peuvent nécessiter une inscription préalable et des frais.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quels types de produits seront en vente ?*
+                </div>
+                <div class="faq-answer">
+                    Les visiteurs auront accès à une variété de produits, y compris des soins pour la peau, des produits capillaires, des cosmétiques, des outils esthétiques et des accessoires de beauté.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Y aura-t-il des démonstrations en direct ?*
+                </div>
+                <div class="faq-answer">
+                    Oui, des démonstrations en direct seront organisées tout au long de l’événement par des professionnels de la beauté, avec des techniques de maquillage, coiffure, soins de la peau et bien plus.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quels sont les horaires de l'événement ?*
+                </div>
+                <div class="faq-answer">
+                    L’événement aura lieu chaque jour du 20 au 22 décembre 2024, de 9h à 18h
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Quelles sont les mesures sanitaires en place ?*
+                </div>
+                <div class="faq-answer">
+                    Nous mettons en place toutes les mesures sanitaires nécessaires, y compris la désinfection des espaces, la disponibilité de gel hydroalcoolique, et le respect des normes de distanciation sociale.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Puis-je devenir sponsor ou partenaire ?*
+                </div>
+                <div class="faq-answer">
+                    Oui, il existe plusieurs opportunités de partenariat et de sponsoring. Contactez-nous pour discuter des options disponibles et des avantages offerts à nos partenaires.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-symbol">+</span>
+                    *Comment obtenir plus d'informations sur l'événement ?*
+                </div>
+                <div class="faq-answer">
+                    Pour plus de détails, consultez notre site web
+                  <a href="www.marchedelesthetique.com">www.marchedelesthetique.com,</a>  suivez nos pages sur les réseaux sociaux, ou contactez-nous directement par téléphone ou e-mail.
+                </div>
+            </div>
+            
+
+            <!-- Ajoutez ici plus de questions jusqu'à 15, en gardant cette structure -->
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center p-6 mt-8" style="background: #630234;">
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="https://facebook.com" target="_blank" class="text-white hover:text-gray-400">
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-white hover:text-gray-400">
+            <i class="fab fa-twitter text-lg"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="text-white hover:text-gray-400">
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="text-white hover:text-gray-400">
+            <i class="fab fa-linkedin-in text-lg"></i>
+          </a>
+        </div>
+        <p class="text-sm">&copy; 2024 Marché de l'Esthétique et de la Beauté. Tous droits réservés.</p>
+      </footer>
+
+    <script>
+        // Script to handle FAQ toggling
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = (answer.style.display === 'none' || !answer.style.display) ? 'block' : 'none';
+            });
+        });
+
+
+        window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) { // Ajustez la valeur de défilement selon vos besoins
+            navbar.classList.remove('navbar-default');
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+            navbar.classList.add('navbar-default');
+        }
+    });
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Lorsque l'icône de menu est cliquée, basculer l'animation
+    menuToggle.addEventListener('click', function() {
+        // Si le menu est caché, retirer 'translate-x-full' pour l'afficher
+        if (mobileMenu.classList.contains('translate-x-full')) {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        } else {
+            // Ajouter 'translate-x-full' pour cacher à nouveau le menu
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenu.classList.remove('translate-x-0');
+        }
+    });
+
+    function openTab(evt, tabName, tabId) {
+        var i, tabcontent, tablinks;
+        
+        // Hide all tab contents
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].classList.add("hidden");
+        }
+
+        // Remove active class from all buttons
+        tablinks = document.getElementsByTagName("button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active");
+        }
+
+        // Show current tab and activate its button
+        document.getElementById(tabName).classList.remove("hidden");
+        document.getElementById(tabId).classList.add("active");
+    }
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000); // Change de slide toutes les 3 secondes
+    </script>
+</body>
+</html>

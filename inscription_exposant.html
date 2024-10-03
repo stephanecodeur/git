@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Participation – MEB 2024</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10 max-w-4xl p-6 bg-white rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold mb-8 text-center text-blue-600">Formulaire de Participation – MEB 2024</h1>
+
+
+        <form action="#" method="POST">
+            <!-- Section 1 : Informations Générales -->
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-4">Section 1 : Informations Générales</h2>
+                
+                <!-- Grid for Name and Email -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="fullName" class="block text-gray-700">Nom complet :</label>
+                        <input type="text" id="fullName" name="fullName" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Prénom et nom">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700">Adresse e-mail :</label>
+                        <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Email valide">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700">Numéro de téléphone :</label>
+                        <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Numéro de téléphone ">
+                    </div>
+                    <div>
+                        <label for="fullName" class="block text-gray-700">Ville/Pays :</label>
+                        <input type="text" id="location" name="location" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Ville/Pays ">
+                    </div>
+                </div>
+            
+               
+            </div>
+            
+
+            <!-- Section 2 : Type de Participation -->
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-4">Section 2 : Type de Participation</h2>
+            
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Vous participez en tant que :</label>
+                    <div class="flex flex-col md:flex-row md:items-center mb-2">
+                        <div class="flex items-center mb-2 md:mr-4">
+                            <input type="radio" id="visitor" name="participationType" value="visitor" class="mr-2">
+                            <label for="visitor" class="text-gray-700">Visiteur</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="exhibitor" name="participationType" value="exhibitor" class="mr-2">
+                            <label for="exhibitor" class="text-gray-700">Exposant</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Section 3 : Pour les visiteurs -->
+         
+            <!-- le bon -->
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Groupe de gauche : Centres d'intérêt -->
+                <div class="col-span-1 sm:col-span-2">
+                    <p class="text-lg font-bold">Votre intérêt pour l'événement :</p>
+                    <div class="mt-3 space-y-2">
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" value="Développement durable" class="text-red-500">
+                            <span class="ml-2">Conférences et panels d'experts</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                            <span class="ml-2">AKeynotes inspirantes</span>
+                        </label>
+            
+            
+            
+                        
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                            <span class="ml-2">Espace recrutement et networking</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                           
+                            <span class="ml-2"> Autre :</span><br>
+                            <input type="text" class="border border-gray-900" class="text-red-500"placeholder=" (Précisez)">
+
+                        </label>
+            
+            
+            
+                        <label class="inline-flex items-center">
+                            <input type="checkbox" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                            <span class="ml-2">Autonomisation des femmes et des jeunes</span>
+                        </label>
+                        <!-- Continue adding more checkboxes... -->
+                    </div>
+                </div>
+            
+                <!-- Groupe de droite : Objectifs de participation1 -->
+                <div class="col-span-1 sm:col-span-2">
+                    <p class="text-lg font-bold">Souhaitez-vous assister à des sessions de recrutement ?</p>
+                    <div class="mt-3 space-y-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" value="Développement durable" class="text-red-500">
+                            <span class="ml-2">Oui</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input type="radio" value="Autonomisation des femmes et des jeunes" class="text-red-500">
+                            <span class="ml-2">Non</span>
+                        </label>
+            
+            
+            
+            
+                        
+                        <!-- Continue adding more checkboxes... -->
+                    </div>
+                </div>
+                
+
+               
+
+            </div>
+
+
+
+             <!-- Section 4 : Pour les exposants -->
+             <div class="mt-8">
+                <h2 class="text-xl font-bold mb-4">Section 4 : Pour les exposants</h2>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label for="companyName" class="block text-gray-700">Nom de votre entreprise :</label>
+                        <input type="text" id="companyName" name="companyName" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Indiquez le nom de votre société">
+                    </div>
+                    <div>
+                        <label for="sector" class="block text-gray-700">Secteur d'activité :</label>
+                        <input type="text" id="sector" name="sector" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Détaillez votre domaine d’expertise">
+                    </div>
+            
+                    <div class="col-span-1 md:col-span-2">
+                        <label for="products" class="block text-gray-700">Types de produits/services que vous exposez :</label>
+                        <input type="text" id="products" name="products" class="w-full p-2 border border-gray-300 rounded mt-1" placeholder="Décrivez les produits ou services">
+                    </div>
+            
+                    <div class="col-span-1 md:col-span-2 mb-4">
+                        <label class="block text-gray-700 mb-2">Type de stand réservé :</label>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="stand250" name="stand" value="250000" class="mr-2">
+                            <label for="stand250" class="text-gray-700">Stand de 250 000 FCFA</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="stand350" name="stand" value="350000" class="mr-2">
+                            <label for="stand350" class="text-gray-700">Stand de 350 000 FCFA</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="stand500" name="stand" value="500000" class="mr-2">
+                            <label for="stand500" class="text-gray-700">Stand de 500 000 FCFA</label>
+                        </div>
+                    </div>
+            
+                    <!-- Section des équipements spécifiques et offres promotionnelles côte à côte -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 col-span-1 md:col-span-2 mb-4">
+                        <div>
+                            <label class="block text-gray-700 mb-2">Besoin d’équipements spécifiques ?</label>
+                            <div class="flex flex-wrap items-center mb-2">
+                                <input type="radio" id="equipYes" name="equipment" value="yes" class="mr-2">
+                                <label for="equipYes" class="text-gray-700">Oui</label>
+                                <input type="text" id="equipDetails" name="equipDetails" class="ml-4 p-2 border border-gray-300 rounded mt-1 w-full md:w-auto" placeholder="Précisez">
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <input type="radio" id="equipNo" name="equipment" value="no" class="mr-2">
+                                <label for="equipNo" class="text-gray-700">Non</label>
+                            </div>
+                        </div>
+            
+                        <div>
+                            <label class="block text-gray-700 mb-2">Avez-vous des offres promotionnelles prévues ?</label>
+                            <div class="flex flex-wrap items-center mb-2">
+                                <input type="radio" id="promoYes" name="promotions" value="yes" class="mr-2">
+                                <label for="promoYes" class="text-gray-700">Oui</label>
+                                <input type="text" id="promoDetails" name="promoDetails" class="ml-4 p-2 border border-gray-300 rounded mt-1 w-full md:w-auto" placeholder="Précisez">
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <input type="radio" id="promoNo" name="promotions" value="no" class="mr-2">
+                                <label for="promoNo" class="text-gray-700">Non</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+
+
+          
+            <!-- Section 5 : Engagement et Conditions -->
+            <div class="mb-6">
+                <h2 class="text-xl font-bold mb-4">Section 5 : Engagement et Conditions</h2>
+            
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            
+                    <!-- Section Offres Promotionnelles -->
+                   
+            
+                    <!-- Section Acceptation des Termes et Conditions -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">J'accepte les termes et conditions :</label>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="termsYes" name="terms" value="yes" class="mr-2">
+                            <label for="termsYes" class="text-gray-700">Oui</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="termsNo" name="terms" value="no" class="mr-2">
+                            <label for="termsNo" class="text-gray-700">Non</label>
+                        </div>
+                    </div>
+            
+                    <!-- Section Communication Futures -->
+                    <div class="mb-4">
+                        <label class="block text-gray-700 mb-2">Souhaitez-vous recevoir des communications futures ?</label>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="commsYes" name="comms" value="yes" class="mr-2">
+                            <label for="commsYes" class="text-gray-700">Oui</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="radio" id="commsNo" name="comms" value="no" class="mr-2">
+                            <label for="commsNo" class="text-gray-700">Non</label>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <div class="text-right">
+                <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600">Soumettre</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
