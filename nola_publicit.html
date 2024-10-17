@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publicité - Digit Communication</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ajout d'animations */
+    .fade-in {
+      animation: fadeIn ease 3s;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75 p-6 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo Section -->
+      <div class="text-yellow-400 font-bold text-2xl">
+        <img src="images/lelogo__2_-removebg-preview.png" alt="Logo" class="w-24 h-20">
+      </div>
+
+      <!-- Navigation Links -->
+      <ul class="hidden md:flex space-x-8 text-lg">
+        <li><a href="apropos.html" class="hover:text-yellow-400">A propos</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Événementiel</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Publicité</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-cover bg-center h-screen" style="background-image: url('images/marie.webp');">
+    <div class="h-full flex flex-col justify-center items-center bg-black bg-opacity-50 text-center text-white p-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">Boostez Votre Visibilité</h1>
+      <p class="text-lg md:text-2xl mb-8 fade-in">Nos solutions de publicité vous permettent de toucher un large public et de maximiser votre impact.</p>
+      <a href="#" class="px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg shadow-lg hover:bg-yellow-500 transition">Découvrir nos services</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Nos Services de Publicité</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Service 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+          <img src="images/mark.webp" alt="Digital Marketing" class="w-full h-48 object-cover rounded-t-lg mb-4">
+          <h3 class="text-2xl font-bold mb-2">Publicité Digitale</h3>
+          <p class="text-gray-600">Attirez vos clients potentiels sur internet grâce à nos campagnes publicitaires ciblées.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+          <img src="images/marke.webp" alt="TV Advertising" class="w-full h-48 object-cover object-contain rounded-t-lg mb-4">
+          <h3 class="text-2xl font-bold mb-2">Publicité Télévisée</h3>
+          <p class="text-gray-600">Diffusez vos publicités à la télévision pour atteindre un large public et marquer les esprits.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-lg transform hover:scale-105 transition">
+          <img src="images/radio.webp" alt="Radio Advertising" class="w-full h-48 object-cover rounded-t-lg mb-4">
+          <h3 class="text-2xl font-bold mb-2">Publicité Radio</h3>
+          <p class="text-gray-600">Communiquez votre message à travers des campagnes publicitaires sur les ondes radio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12">Ce que nos clients disent</h2>
+      <div class="relative w-full md:w-2/3 mx-auto">
+        <div class="overflow-hidden rounded-lg shadow-lg">
+          <!-- Slider -->
+          <div class="flex" id="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="w-full px-4 py-8 bg-white">
+              <img src="images/dupond.webp" alt="Client 1" class="w-16 h-16 rounded-full mx-auto mb-4">
+              <p class="italic text-gray-600">“Les services de Digit Communication nous ont permis d'augmenter notre visibilité de manière spectaculaire. Un partenaire de confiance !”</p>
+              <p class="font-bold mt-4">Jean Dupont</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="w-full px-4 py-8 bg-white">
+              <img src="images/marie.webp" alt="Client 2" class="w-16 h-16 rounded-full mx-auto mb-4">
+              <p class="italic text-gray-600">“Grâce à leur expertise en publicité, nous avons atteint un nouveau public et boosté nos ventes.”</p>
+              <p class="font-bold mt-4">Marie Lambert</p>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="w-full px-4 py-8 bg-white">
+              <img src="images/dupond.webp" alt="Client 3" class="w-16 h-16 rounded-full mx-auto mb-4">
+              <p class="italic text-gray-600">“Je recommande fortement leurs services pour toute campagne de publicité sérieuse !”</p>
+              <p class="font-bold mt-4">Pierre Michel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 Digit Communication. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to handle sliding testimonials -->
+  <script>
+    const slider = document.getElementById('testimonial-slider');
+    let scrollAmount = 0;
+    
+    setInterval(() => {
+      scrollAmount += slider.offsetWidth;
+      if (scrollAmount >= slider.scrollWidth) {
+        scrollAmount = 0;
+      }
+      slider.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }, 4000);
+  </script>
+</body>
+</html>
