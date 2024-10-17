@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événementiel - Organisez vos événements avec nous</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+     /* Custom style for testimonial carousel */
+     .testimonial-item {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-container {
+            display: flex;
+        }
+</style>
+<body class="bg-gray-100 text-gray-900">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75 p-6 text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo Section -->
+            <div class="text-yellow-400 font-bold text-2xl">
+                <img src="images/lelogo__2_-removebg-preview.png" alt="Logo" class="w-34 h-20"> <!-- Taille augmentée -->
+            </div>
+    
+            <!-- Hamburger Icon for Small Screens -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i> <!-- Font Awesome icon for the hamburger -->
+                </button>
+            </div>
+    
+            <!-- Navigation Links for Desktop -->
+            <ul id="menu" class="hidden md:flex md:space-x-8 text-lg">
+                <li><a href="apropos.html" class="hover:text-yellow-400">A propos</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Événementiel</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+        </div>
+    
+        <!-- Fullscreen Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white text-black flex flex-col justify-center items-center z-20">
+            <!-- Logo at the top -->
+            <div class="text-yellow-400 font-bold text-3xl mb-6">
+                <span class="block">digit</span>
+                <span class="block text-sm text-gray-600">communication</span>
+            </div>
+    
+            <!-- Mobile Menu Items -->
+            <ul class="space-y-6 text-xl text-center">
+                <li><a href="#" class="hover:text-yellow-400">A propos</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Événementiel</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+            </ul>
+    
+            <!-- Close Button -->
+            <button id="close-menu" class="absolute top-6 right-6 text-black focus:outline-none">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white py-20 mt-24">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Organisez des Événements Mémorables</h1>
+            <p class="text-lg mb-8">Transformez vos idées en expériences inoubliables avec notre équipe d'experts en événementiel.</p>
+            <a href="#services" class="bg-white text-gray-900 py-3 px-6 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">Découvrez nos services</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">Nos Services Événementiels</h2>
+                <p class="text-gray-700 mt-4">Nous prenons en charge tous les aspects de vos événements, de la planification à l'exécution, pour vous offrir des moments exceptionnels.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Event Planning Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-calendar-alt text-blue-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Planification d'Événements</h3>
+                    <p class="text-gray-600">Nous concevons des événements uniques, sur mesure, en tenant compte de vos objectifs et de vos attentes.</p>
+                </div>
+
+
+                 <!-- Venue & Design Card -->
+                 <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-map-marker-alt text-pink-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Lieu & Design</h3>
+                    <p class="text-gray-600">Choisissez parmi les meilleurs lieux, et laissez-nous nous occuper de la décoration et de l'ambiance.</p>
+                </div>
+
+
+
+
+                
+
+                <!-- Logistics Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-truck text-purple-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Logistique & Coordination</h3>
+                    <p class="text-gray-600">De la mise en place au bon déroulement de votre événement, nous assurons une coordination sans faille.</p>
+                </div>
+                <!-- Logistics Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-truck text-purple-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Logistique & Coordination</h3>
+                    <p class="text-gray-600">De la mise en place au bon déroulement de votre événement, nous assurons une coordination sans faille.</p>
+                </div>
+
+               
+                <!-- Event Planning Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-calendar-alt text-blue-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Planification d'Événements</h3>
+                    <p class="text-gray-600">Nous concevons des événements uniques, sur mesure, en tenant compte de vos objectifs et de vos attentes.</p>
+                </div>
+
+
+
+
+                <!-- Venue & Design Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                    <i class="fas fa-map-marker-alt text-pink-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Lieu & Design</h3>
+                    <p class="text-gray-600">Choisissez parmi les meilleurs lieux, et laissez-nous nous occuper de la décoration et de l'ambiance.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonials Section -->
+   <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-12">Ce que nos clients disent</h2>
+
+        <div id="testimonial-carousel" class="relative overflow-hidden w-full max-w-4xl mx-auto">
+            <div class="carousel-container">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://via.placeholder.com/100" alt="Marie Dupont" class="rounded-full mb-4">
+                    <p class="italic text-gray-700 mb-4">"Notre événement a été un énorme succès grâce à leur équipe. Ils ont pris soin de chaque détail et ont dépassé nos attentes."</p>
+                    <h3 class="text-lg font-semibold">Marie Dupont</h3>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://via.placeholder.com/100" alt="Jean Paul" class="rounded-full mb-4">
+                    <p class="italic text-gray-700 mb-4">"Professionnalisme, créativité et passion. Merci pour avoir rendu notre journée si spéciale !"</p>
+                    <h3 class="text-lg font-semibold">Jean Paul</h3>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item bg-gray-100 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                    <img src="https://via.placeholder.com/100" alt="Claire Martin" class="rounded-full mb-4">
+                    <p class="italic text-gray-700 mb-4">"Une organisation sans faille. Nous avons hâte de travailler à nouveau avec vous pour nos prochains événements."</p>
+                    <h3 class="text-lg font-semibold">Claire Martin</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Navigation Buttons -->
+        <div class="flex justify-center mt-6">
+            <button id="prev-btn" class="bg-gray-700 text-white py-2 px-4 mr-2 rounded-full focus:outline-none">◀</button>
+            <button id="next-btn" class="bg-gray-700 text-white py-2 px-4 ml-2 rounded-full focus:outline-none">▶</button>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="bg-blue-500 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Prêt à Organiser Votre Prochain Événement ?</h2>
+            <p class="mb-8">Notre équipe est à votre disposition pour vous offrir une expérience unique et inoubliable.</p>
+            <a href="#" class="bg-white text-blue-500 py-3 px-8 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">Contactez-nous</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">&copy; 2024 Digit Communication. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script for the menu toggle -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+
+
+        const carouselContainer = document.querySelector('.carousel-container');
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    const totalTestimonials = testimonials.length;
+    let currentIndex = 0;
+
+    document.getElementById('next-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalTestimonials;
+        updateCarousel();
+    });
+
+    document.getElementById('prev-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
+        updateCarousel();
+    });
+
+    function updateCarousel() {
+        carouselContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // Optional: Auto-slide every 5 seconds
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalTestimonials;
+        updateCarousel();
+    }, 5000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Stratégique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 w-full z-10 bg-black bg-opacity-75 p-6 text-white">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo Section -->
+        <div class="text-yellow-400 font-bold text-2xl">
+            <img src="images/lelogo.jpeg" alt=""class="w-30 h-14">
+        </div>
+
+        <!-- Hamburger Icon for Small Screens -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Navigation Links for Desktop -->
+        <ul id="menu" class="hidden md:flex md:space-x-8 text-lg">
+            <li><a href="apropos.html" class="hover:text-yellow-400">A propos</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+            <li><a href="#" class="hover:text-yellow-400">One Exprès</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Traffic</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+        </ul>
+    </div>
+
+    <!-- Fullscreen Mobile Menu -->
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white text-black flex flex-col justify-center items-center z-20">
+        <!-- Logo at the top -->
+        <div class="text-yellow-400 font-bold text-3xl mb-6">
+            <span class="block">digit</span>
+            <span class="block text-sm text-gray-600">communication</span>
+        </div>
+
+        <!-- Mobile Menu Items -->
+        <ul class="space-y-6 text-xl text-center">
+            <li><a href="#" class="hover:text-yellow-400">A propos</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+            <li><a href="#" class="hover:text-yellow-400">One Exprès</a></li>
+            <li><a href="#" class="hover:text-yellow-400">Traffic</a></li>
+            <li><a href="#" class="hover:text-yellow-400">FAQ</a></li>
+        </ul>
+
+        <!-- Close Button -->
+        <button id="close-menu" class="absolute top-6 right-6 text-black focus:outline-none">
+            <i class="fas fa-times text-3xl"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white py-20 mt-24">
+    <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold mb-4">Communication Stratégique</h1>
+        <p class="text-lg mb-8">Développez une stratégie de communication qui propulse votre marque vers de nouveaux sommets.</p>
+        <a href="#services" class="bg-white text-gray-800 py-3 px-6 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">En savoir plus</a>
+    </div>
+</section>
+
+<!-- About Communication Strategy -->
+<section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Qu'est-ce que la Communication Stratégique ?</h2>
+            <p class="text-gray-700 mt-4">Une approche intégrée pour aligner votre communication avec les objectifs clés de votre entreprise, et bâtir une image forte et cohérente.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Strategic Planning Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-chart-line text-yellow-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Planification Stratégique</h3>
+                <p class="text-gray-600">Établir un plan solide pour maximiser l'impact de vos actions de communication.</p>
+            </div>
+
+            <!-- Branding & Identity Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-bullhorn text-red-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Image de Marque & Branding</h3>
+                <p class="text-gray-600">Créer une identité forte et cohérente à travers des messages percutants.</p>
+            </div>
+
+            <!-- Media & Outreach Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-globe text-pink-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Relations Médias & Public</h3>
+                <p class="text-gray-600">Engagez vos audiences et influencez les perceptions à travers des canaux appropriés.</p>
+            </div>
+            <!-- Strategic Planning Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-chart-line text-yellow-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Planification Stratégique</h3>
+                <p class="text-gray-600">Établir un plan solide pour maximiser l'impact de vos actions de communication.</p>
+            </div>
+
+            <!-- Branding & Identity Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-bullhorn text-red-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Image de Marque & Branding</h3>
+                <p class="text-gray-600">Créer une identité forte et cohérente à travers des messages percutants.</p>
+            </div>
+
+            <!-- Media & Outreach Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-globe text-pink-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Relations Médias & Public</h3>
+                <p class="text-gray-600">Engagez vos audiences et influencez les perceptions à travers des canaux appropriés.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-yellow-500 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Vous avez besoin d'une stratégie de communication efficace ?</h2>
+        <p class="mb-8">Nous sommes là pour vous aider à bâtir une image qui résonne avec vos clients et partenaires.</p>
+        <a href="#" class="bg-white text-gray-900 py-3 px-8 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">Contactez-nous</a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400">&copy; 2024 Digit Communication. Tous droits réservés.</p>
+    </div>
+</footer>
+
+<!-- Script for the menu toggle -->
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+    
+    closeMenu.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+</script>
+
+</body>
+</html>
