@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Communication Stratégique</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        
+        .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+ <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="#" class="flex items-center">
+        <img src="images/WhatsApp Image 2024-11-04 at 16.06.23.jpeg" alt="Logo" class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 mr-2">
+        
+      </a>
+  
+      <!-- Hamburger Icon (for small screens) -->
+      <div class="lg:hidden">
+        <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+  
+      <!-- Links -->
+      <div id="menu" class="hidden lg:flex space-x-8 text-lg">
+        <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+        <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">Services</a>
+        <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">Nola publicité</a>
+        <a href="one_expres.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+        <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+        <a href="" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">FAQ</a>
+        <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+      </div>
+    </div>
+  
+    <!-- Dropdown Menu for Small Screens -->
+    <div id="dropdown-menu" class="lg:hidden hidden flex flex-col space-y-2 bg-gray-100 p-4">
+      <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+        <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">Services</a>
+        <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">Nola publicité</a>
+        <a href="even.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+        <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+        <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">FAQ</a>
+        <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+    </div>
+  </nav>
+  
+
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-white py-20 mt-24">
+    <div class="container mx-auto px-6 text-center">
+
+        <h1 class="text-4xl font-bold mb-4">Communication Stratégique</h1>
+        <p class="text-lg mb-8">Développez une stratégie de communication qui propulse votre marque vers de nouveaux sommets.</p>
+        <a href="#services" class="bg-white text-gray-800 py-3 px-6 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">En savoir plus</a>
+    </div>
+</section>
+
+<!-- About Communication Strategy -->
+<section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-center mb-8 bg-orange-200 py-2 p-3">Qu'est-ce que la Communication Stratégique ?</h2>
+
+            <p class="text-gray-700 mt-4">Une approche intégrée pour aligner votre communication avec les objectifs clés de votre entreprise, et bâtir une image forte et cohérente.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Strategic Planning Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-chart-line text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Planification Stratégique</h3>
+                <p class="text-gray-600">Établir un plan solide pour maximiser l'impact de vos actions de communication.</p>
+            </div>
+
+            <!-- Branding & Identity Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-bullhorn text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Image de Marque & Branding</h3>
+                <p class="text-gray-600">Créer une identité forte et cohérente à travers des messages percutants.</p>
+            </div>
+
+            <!-- Media & Outreach Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-globe text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Relations Médias & Public</h3>
+                <p class="text-gray-600">Engagez vos audiences et influencez les perceptions à travers des canaux appropriés.</p>
+            </div>
+            <!-- Strategic Planning Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-chart-line text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Planification Stratégique</h3>
+                <p class="text-gray-600">Établir un plan solide pour maximiser l'impact de vos actions de communication.</p>
+            </div>
+
+            <!-- Branding & Identity Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-bullhorn text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Image de Marque & Branding</h3>
+                <p class="text-gray-600">Créer une identité forte et cohérente à travers des messages percutants.</p>
+            </div>
+
+            <!-- Media & Outreach Card -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+                <i class="fas fa-globe text-orange-500 text-4xl mb-4"></i>
+                <h3 class="text-xl font-semibold mb-2">Relations Médias & Public</h3>
+                <p class="text-gray-600">Engagez vos audiences et influencez les perceptions à travers des canaux appropriés.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="bg-orange-500 text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">Vous avez besoin d'une stratégie de communication efficace ?</h2>
+        <p class="mb-8">Nous sommes là pour vous aider à bâtir une image qui résonne avec vos clients et partenaires.</p>
+        <a href="#" class="bg-white text-gray-900 py-3 px-8 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">Contactez-nous</a>
+    </div>
+</section>
+
+
+ <!-- Fullscreen Mobile Menu -->
+ <div id="mobile-menu" class="hidden fixed inset-0 bg-white text-black flex flex-col justify-center items-center z-20">
+    <!-- Logo at the top -->
+    <div class="text-yellow-400 font-bold text-3xl mb-6">
+        <span class="block">digit</span>
+        <span class="block text-sm text-gray-600">communication</span>
+    </div>
+
+    <!-- Mobile Menu Items -->
+    <ul class="space-y-6 text-xl text-center">
+        <li><a href="#" class="hover:text-yellow-400">A propos</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Événementiel</a></li>
+        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+    </ul>
+
+    <!-- Close Button -->
+    <button id="close-menu" class="absolute top-6 right-6 text-black focus:outline-none">
+        <i class="fas fa-times text-3xl"></i>
+    </button>
+</div>
+</nav>
+
+<!-- Hero Section -->
+
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-100">
+<div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-center mb-8 bg-orange-200 py-2 p-3">Nos Services Événementiels</h2>
+     
+        <p class="text-gray-700 mt-4">Nous prenons en charge tous les aspects de vos événements, de la planification à l'exécution, pour vous offrir des moments exceptionnels.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Event Planning Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-calendar-alt text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Planification d'Événements</h3>
+            <p class="text-gray-600">Nous concevons des événements uniques, sur mesure, en tenant compte de vos objectifs et de vos attentes.</p>
+        </div>
+
+
+         <!-- Venue & Design Card -->
+         <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-map-marker-alt text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Lieu & Design</h3>
+            <p class="text-gray-600">Choisissez parmi les meilleurs lieux, et laissez-nous nous occuper de la décoration et de l'ambiance.</p>
+        </div>
+
+
+
+
+        
+
+        <!-- Logistics Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-truck text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Logistique & Coordination</h3>
+            <p class="text-gray-600">De la mise en place au bon déroulement de votre événement, nous assurons une coordination sans faille.</p>
+        </div>
+        <!-- Logistics Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-truck text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Logistique & Coordination</h3>
+            <p class="text-gray-600">De la mise en place au bon déroulement de votre événement, nous assurons une coordination sans faille.</p>
+        </div>
+
+       
+        <!-- Event Planning Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-calendar-alt text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Planification d'Événements</h3>
+            <p class="text-gray-600">Nous concevons des événements uniques, sur mesure, en tenant compte de vos objectifs et de vos attentes.</p>
+        </div>
+
+
+
+
+        <!-- Venue & Design Card -->
+        <div class="bg-white p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <i class="fas fa-map-marker-alt text-orange-500 text-4xl mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Lieu & Design</h3>
+            <p class="text-gray-600">Choisissez parmi les meilleurs lieux, et laissez-nous nous occuper de la décoration et de l'ambiance.</p>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="container mx-auto py-12">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-center mb-8 bg-orange-200 py-2 p-3">Témoignages</h2>
+
+        <p class="text-gray-600 mt-4">Ce que nos clients disent de nous</p>
+        <div class="border-t-2 border-orange-500 w-12 mx-auto mt-4"></div>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-3 md:grid-cols-2 fade-in">
+        <!-- Témoignage 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card">
+            <div class="flex items-center mb-4">
+                <img class="w-16 h-16 rounded-full mr-4" src="images/i (15).webp" alt="Client 1">
+                <div>
+                    <h3 class="text-xl font-semibold">Jean Dupont</h3>
+                    <p class="text-gray-600">CEO de Entreprise X</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"Grâce à leur expertise, nous avons réussi à doubler notre chiffre d'affaires en moins de six mois. Leur équipe est attentive, professionnelle et dévouée."</p>
+        </div>
+
+        <!-- Témoignage 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card">
+            <div class="flex items-center mb-4">
+                <img class="w-16 h-16 rounded-full mr-4" src="images/i (14).webp" alt="Client 2">
+                <div>
+                    <h3 class="text-xl font-semibold">Marie Leclerc</h3>
+                    <p class="text-gray-600">Directrice Marketing, Société Y</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"Nous avons été impressionnés par leur approche innovante et leur capacité à s'adapter à nos besoins spécifiques. Je recommande vivement leurs services."</p>
+        </div>
+
+        <!-- Témoignage 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card">
+            <div class="flex items-center mb-4">
+                <img class="w-16 h-16 rounded-full mr-4" src="images/i (13).png" alt="Client 3">
+                <div>
+                    <h3 class="text-xl font-semibold">Pierre Martin</h3>
+                    <p class="text-gray-600">Fondateur de Start-Up Z</p>
+                </div>
+            </div>
+            <p class="text-gray-700">"Une équipe formidable avec une vraie passion pour leur métier. Ils nous ont accompagnés de manière professionnelle et ont su répondre à nos attentes."</p>
+        </div>
+
+        <!-- Ajoutez plus de témoignages ici si nécessaire -->
+
+    </div>
+</section>
+
+
+<!-- Call to Action -->
+<section class="bg-orange-500 text-white py-20">
+<div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">Prêt à Organiser Votre Prochain Événement ?</h2>
+    <p class="mb-8">Notre équipe est à votre disposition pour vous offrir une expérience unique et inoubliable.</p>
+    <a href="contact.html" class="bg-white text-black py-3 px-8 rounded-full shadow-lg font-semibold transition-transform transform hover:scale-105">Contactez-nous</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-orange-700 text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+        <p class="text-white font-bold">&copy; 2024 Icom Africa. Tous droits réservés.</p>
+
+        <a href="#" class="text-white  hover:text-orange-200 mx-2"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+</footer>
+
+<!-- Script for the menu toggle -->
+<script>
+    // const menuToggle = document.getElementById('menu-toggle');
+    // const closeMenu = document.getElementById('close-menu');
+    // const mobileMenu = document.getElementById('mobile-menu');
+    
+    // menuToggle.addEventListener('click', () => {
+    //     mobileMenu.classList.remove('hidden');
+    // });
+    
+    // closeMenu.addEventListener('click', () => {
+    //     mobileMenu.classList.add('hidden');
+    // });
+
+
+
+
+  
+        const slider = document.getElementById('testimonial-slider');
+        let scrollAmount = 0;
+        
+        setInterval(() => {
+          scrollAmount += slider.offsetWidth;
+          if (scrollAmount >= slider.scrollWidth) {
+            scrollAmount = 0;
+          }
+          slider.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }, 4000);
+
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+
+
+    
+  
+  </script>    
+  <script src="js/script.JS"></script>
+</body>
+</html>

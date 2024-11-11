@@ -23,12 +23,111 @@ body {
 }
 
 
-
 @layer utilities {
   .bg-hero {
-    background-image: url('images/ulistre\ \(14\).jpeg'); /* Remplacez avec votre image */
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5), /* Couleur de dégradé avec transparence */
+      rgba(0, 0, 0, 0.5) /* Couleur de dégradé avec transparence */
+    ), url('images/20744707-20744699-g-jpg_7339640.jpg'); /* Remplacez avec votre image */
     background-size: cover;
     background-position: center;
     height: 100vh;
   }
+}
+
+
+.bg-hro{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8), /* Couleur de dégradé avec transparence */
+      rgba(0, 0, 0, 0.8) /* Couleur de dégradé avec transparence */
+    ), url('images/705x352-accueil-boutique.jpg'); /* Remplacez avec votre image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+.gb-gt{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.8), /* Couleur de dégradé avec transparence */
+      rgba(0, 0, 0, 0.8) /* Couleur de dégradé avec transparence */
+    ), url('images/bpg\ post\ features.gif'); /* Remplacez avec votre image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+
+
+.bg-faq{
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6), /* Couleur de dégradé avec transparence */
+      rgba(0, 0, 0, 0.6) /* Couleur de dégradé avec transparence */
+    ), url('images/i\ \(19\).webp'); /* Remplacez avec votre image */
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+}
+.procecus{
+  color: white;
+}
+
+/* Style pour le lien actif */
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid orangered; /* ou une autre couleur */
+  color: orangered; /* ou une autre couleur pour le texte actif */
+}
+
+
+
+
+
+
+
+ /* Styles pour la largeur fixe du carrousel */
+ .carousel-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 33.3333%; /* Affiche 3 éléments à la fois */
+  box-sizing: border-box;
+}
+
+/* Ajustements pour les petits écrans */
+@media (max-width: 768px) {
+  .carousel-item {
+      min-width: 100%; /* Affiche un élément à la fois sur les petits écrans */
+  }
+}
+
+
+  /* Animation de l'apparition en fondu */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover pour images */
+.blog-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Hover pour liens */
+.read-more:hover {
+    text-decoration: underline;
+    transform: scale(1.05);
+    color: #f97316;
 }

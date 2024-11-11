@@ -1,82 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog </title>
+    <title>Blog Moderne et Animé</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+      
+   
 </head>
-<body class="bg-gray-50 text-gray-900">
-    <!-- Navbar -->
-    <nav class="bg-white shadow-lg">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-indigo-600"><img src="images/logo.jpeg" alt=""class="w-30 h-20"></a>
-            <div class="hidden md:flex space-x-6">
-                <a href="#" class="text-gray-600 hover:text-indigo-600">Accueil</a>
-                <a href="#" class="text-gray-600 hover:text-indigo-600">À propos</a>
-                <a href="#" class="text-gray-600 hover:text-indigo-600">Articles</a>
-                <a href="#" class="text-gray-600 hover:text-indigo-600">Contact</a>
-            </div>
+<body class="bg-white font-sans antialiased">
+
+    <!-- En-tête -->
+    
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="flex items-center">
+            <img src="images/WhatsApp Image 2024-11-04 at 16.06.23.jpeg" alt="Logo" class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 mr-2">
+            
+          </a>
+      
+          <!-- Hamburger Icon (for small screens) -->
+          <div class="lg:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Links -->
+          <div id="menu" class="hidden lg:flex space-x-8 text-lg">
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Nola publicité</a>
+            <a href="one_expres.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">Blog</a>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="bg-indigo-600 text-white py-20">
-        <div class="container mx-auto text-center">
-            <h1 class="text-5xl font-bold mb-4">Bienvenue sur Mon Blog</h1>
-            <p class="text-xl mb-8">Explorez des articles inspirants et des idées fascinantes.</p>
-            <a href="#articles" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-indigo-100">Lire les Articles</a>
+      
+        <!-- Dropdown Menu for Small Screens -->
+        <div id="dropdown-menu" class="lg:hidden hidden flex flex-col space-y-2 bg-gray-100 p-4">
+          <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Nola publicité</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">Blog</a>
         </div>
-    </section>
-
-    <!-- Blog Articles Grid -->
-    <section id="articles" class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Derniers Articles</h2>
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-                <!-- Blog Card 1 -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
-                    <img src="https://via.placeholder.com/500x300" alt="Blog Image 1" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Titre de l'Article</h3>
-                        <p class="text-gray-600 mb-4">Un aperçu fascinant de l'article qui vous captivera dès le premier mot.</p>
-                        <a href="#" class="text-indigo-600 hover:underline font-bold">Lire Plus &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Blog Card 2 -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
-                    <img src="https://via.placeholder.com/500x300" alt="Blog Image 2" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Titre de l'Article</h3>
-                        <p class="text-gray-600 mb-4">Un aperçu fascinant de l'article qui vous captivera dès le premier mot.</p>
-                        <a href="#" class="text-indigo-600 hover:underline font-bold">Lire Plus &rarr;</a>
-                    </div>
-                </div>
-
-                <!-- Blog Card 3 -->
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transform hover:-translate-y-1 transition duration-300">
-                    <img src="https://via.placeholder.com/500x300" alt="Blog Image 3" class="w-full h-56 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold mb-2">Titre de l'Article</h3>
-                        <p class="text-gray-600 mb-4">Un aperçu fascinant de l'article qui vous captivera dès le premier mot.</p>
-                        <a href="#" class="text-indigo-600 hover:underline font-bold">Lire Plus &rarr;</a>
-                    </div>
+      </nav>
+    <!-- Section des articles de blog -->
+    <main class="max-w-6xl mx-auto py-12 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            
+            <!-- Carte de blog -->
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-bold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
-            <p class="text-sm">&copy; 2024 MonBlog. Tous droits réservés.</p>
-            <div class="flex justify-center space-x-4 mt-4">
-                <a href="#" class="hover:text-indigo-500">Facebook</a>
-                <a href="#" class="hover:text-indigo-500">Twitter</a>
-                <a href="#" class="hover:text-indigo-500">Instagram</a>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
             </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+            <div class="blog-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg transform transition hover:-translate-y-1 duration-300 fade-in">
+                <img src="images/20744707-20744699-g-jpg_7339640.jpg" alt="Image de blog" class="w-full h-56 object-cover transition-transform duration-300">
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold text-orange-500 mb-3">Titre de l'article 1</h2>
+                    <p class="text-gray-700 mb-4">Voici un aperçu captivant de cet article qui saura captiver votre attention et vous inciter à en savoir plus...</p>
+                    <a href="#" class="text-orange-500 read-more font-medium transition duration-300">Lire la suite →</a>
+                </div>
+            </div>
+           
+            
+            <!-- Reproduire le bloc ci-dessus pour d'autres articles -->
+
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-orange-500 text-black py-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-sm text-white font-bold">© 2024 Blog Moderne. Tous droits réservés.</p>
+            <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-instagram"></i></a>
         </div>
     </footer>
+
+    <!-- JavaScript pour animer les cartes au chargement -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const blogCards = document.querySelectorAll('.fade-in');
+            blogCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+
+        // Toggle menu for small screens
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+    </script>
+
+<script src="js/script.JS"></script>>
 </body>
 </html>

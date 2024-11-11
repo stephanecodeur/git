@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Page Animée</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="flex items-center">
+            <img src="images/WhatsApp Image 2024-11-04 at 16.06.23.jpeg" alt="Logo" class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 mr-2">
+            
+          </a>
+      
+          <!-- Hamburger Icon (for small screens) -->
+          <div class="lg:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Links -->
+          <div id="menu" class="hidden lg:flex space-x-8 text-lg">
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Nola publicité</a>
+            <a href="one_expres.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+          </div>
+        </div>
+      
+        <!-- Dropdown Menu for Small Screens -->
+        <div id="dropdown-menu" class="lg:hidden hidden flex flex-col space-y-2 bg-gray-100 p-4">
+          <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Nola publicité</a>
+            <a href="#" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+        </div>
+      </nav>
+      
+
+      <section class="bg-faq flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-3xl md:text-3xl font-bold text-white uppercase">
+            Pour <span class="text-white ">en savoir plus </span> sur 
+          </h1>
+          <h2 class="text-6xl md:text-8xl font-bold text-white mt-4">Icom Africa</h2>
+        </div>
+      </section>
+
+
+    <div class="max-w-4xl mx-auto py-8">
+        <!-- <h1 class="text-3xl font-bold text-center mb-8">Foire aux Questions</h1> -->
+        <h2 class="text-4xl font-bold text-center mb-8 bg-orange-200 py-2 p-3">Foire aux Questions</h2>
+
+
+        <!-- Section FAQ -->
+        <div class="space-y-4">
+            <!-- FAQ Item -->
+            <div class="faq-item border border-gray-300 rounded-lg p-4 shadow-sm">
+                <div class="faq-header flex justify-between items-center cursor-pointer">
+                    <h2 class="text-xl font-meduim">Qui sommes nous.? </h2>
+                    <span class="transition-transform transform rotate-0" id="icon1">+</span>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-max-height duration-500 ease-out" id="content1">
+                    <p class="mt-2 text-gray-700">Nous sommes une équipe de jeunes africains passionnés de communication et de services dans différents secteurs d'activité apportant des Solutions direct répondant a un besoin optimal.</p>
+                </div>
+            </div>
+
+            <!-- Autres éléments de la FAQ -->
+            <div class="faq-item border border-gray-300 rounded-lg p-4 shadow-sm">
+                <div class="faq-header flex justify-between items-center cursor-pointer">
+                    <h2 class="text-xl font-medium">Nous définis en quatre mots ?    </h2>
+                    <span class="transition-transform transform rotate-0" id="icon2">+</span>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-max-height duration-500 ease-out" id="content2">
+                    <p class="mt-2 text-gray-700">Visionnaire, Innovant, Sens d'écoute ,          Satisfaction. </p>
+                </div>
+            </div>
+
+            <!-- Ajouter d'autres FAQ items ici -->
+
+            <div class="faq-item border border-gray-300 rounded-lg p-4 shadow-sm">
+                <div class="faq-header flex justify-between items-center cursor-pointer">
+                    <h2 class="text-xl font-medium"> Nos représentations ? </h2>
+                    <span class="transition-transform transform rotate-0" id="icon2">+</span>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-max-height duration-500 ease-out" id="content2">
+                    <p class="mt-2 text-gray-700">Cote d'Ivoire Sénégal Bénin Togo Mali Burkina Guinée Rwanda Maroc Gabon Niger Arabie saoudite Congo Cameroun  Ghana Nigeria  France canada suisse  </p>
+                </div>
+            </div>
+
+            <!-- Ajouter d'autres FAQ items ici -->
+            <div class="faq-item border border-gray-300 rounded-lg p-4 shadow-sm">
+                <div class="faq-header flex justify-between items-center cursor-pointer">
+                    <h2 class="text-xl font-medium"> Notre siège social ?  </h2>
+                    <span class="transition-transform transform rotate-0" id="icon2">+</span>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-max-height duration-500 ease-out" id="content2">
+                    <p class="mt-2 text-gray-700">Côte d'Ivoire Abidjan Cocody 2plateaux</p>
+                </div>
+            </div>
+
+            <!-- Ajouter d'autres FAQ items ici -->
+            <div class="faq-item border border-gray-300 rounded-lg p-4 shadow-sm">
+                <div class="faq-header flex justify-between items-center cursor-pointer">
+                    <h2 class="text-xl font-medium">Ceux qui nous font confiance ?</h2>
+                    <span class="transition-transform transform rotate-0" id="icon2">+</span>
+                </div>
+                <div class="faq-content max-h-0 overflow-hidden transition-max-height duration-500 ease-out" id="content2">
+                    <p class="mt-2 text-gray-700"> DJAMO ministère du tourisme   etc....</p>
+                </div>
+            </div>
+
+            
+
+            <!-- Ajouter d'autres FAQ items ici -->
+
+        </div>
+    </div>
+    <footer class="bg-orange-500 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p class="text-sm font-bold">&copy; 2024 Icom Africa. Tous droits réservés.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-white hover:text-orange-200 mx-2"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // JavaScript pour animer l'ouverture/fermeture des FAQ
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.querySelector('.faq-content');
+                const icon = item.querySelector('span');
+
+                if (content.classList.contains('max-h-0')) {
+                    content.classList.remove('max-h-0');
+                    content.classList.add('max-h-40'); // Ajustez la hauteur maximale selon le contenu
+                    icon.style.transform = 'rotate(45deg)';
+                } else {
+                    content.classList.remove('max-h-40');
+                    content.classList.add('max-h-0');
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            });
+        });
+
+       
+    // Toggle menu for small screens
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+
+
+    
+  </script>
+<script src="js/script.JS"></script>
+   
+</body>
+</html>

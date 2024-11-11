@@ -40,3 +40,33 @@ function closeModal() {
     menuToggle.addEventListener('click', function () {
       mobileMenu.classList.toggle('hidden');  // Toggle visibility of the mobile menu
     });
+
+    // JavaScript pour activer le lien en fonction de la page
+document.addEventListener("DOMContentLoaded", function () {
+  const currentLocation = window.location.pathname.split("/").pop();
+  const menuItems = document.querySelectorAll("#menu a");
+
+  menuItems.forEach(item => {
+    if (item.getAttribute("href") === currentLocation) {
+      item.classList.add("active");
+    }
+  });
+});
+
+
+//  JavaScript to toggle the mobile menu 
+
+  // Toggle menu for small screens
+  const menuBtn = document.getElementById('menu-btn');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+
+  menuBtn.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+
+
+
+
+
+  

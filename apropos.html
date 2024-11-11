@@ -4,9 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Import TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-100">
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+          <!-- Logo -->
+          <a href="index.html" class="flex items-center">
+            <img src="images/WhatsApp Image 2024-11-04 at 16.06.23.jpeg" alt="Logo" class="h-16 w-16 md:h-20 md:w-20 lg:h-24 lg:w-24 mr-2">
+            
+          </a>
+      
+          <!-- Hamburger Icon (for small screens) -->
+          <div class="lg:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+              </svg>
+            </button>
+          </div>
+      
+          <!-- Links -->
+          <div id="menu" class="hidden lg:flex space-x-8 text-lg">
+            <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium ">Nola publicité</a>
+            <a href="even.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="faq.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+          </div>
+        </div>
+      
+        <!-- Dropdown Menu for Small Screens -->
+        <div id="dropdown-menu" class="lg:hidden hidden flex flex-col space-y-2 bg-gray-100 p-4">
+          <a href="apropos.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium active">A propos </a>
+            <a href="service.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Services</a>
+            <a href="nola_publicit.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Nola publicité</a>
+            <a href="even.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">One Exprès</a>
+            <a href="traffic.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Traffic </a>
+            <a href="" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">FAQ</a>
+            <a href="blog.html" class="text-gray-700 hover:text-orange-500 transition duration-300 ease-in-out font-medium">Blog</a>
+        </div>
+      </nav>
+
+
+        <!-- Hero Section with Background Image -->
+  <section class="bg-hro flex items-center justify-center">
+    <div class="text-center">
+      <h1 class="text-6xl md:text-8xl font-bold text-white uppercase">
+       A propos<span class="text-white "> de</span> Icom
+      </h1>
+      <h2 class="text-6xl md:text-8xl font-bold text-white mt-4">africa</h2>
+    </div>
+  </section>
+
+
+
 
     <section class="py-12 bg-white">
         <div class="container mx-auto px-6">
@@ -19,7 +74,7 @@
                 
                 <!-- Texte -->
                 <div class="lg:w-1/2 lg:pl-12">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Qui sommes-nous</h1>
+                    <h1 class="  bg-orange-500 text-4xl font-bold text-white mb-4">Qui sommes-nous</h1>
                     <p class="text-gray-600 text-lg mb-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tincidunt urna, 
                         vitae egestas risus pretium ac. Mauris auctor, tortor a consectetur cursus, augue enim laoreet lectus, 
@@ -42,7 +97,7 @@
                 
                 <!-- Texte -->
                 <div class="lg:w-1/2 lg:pl-12">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4"> Notre mission</h1>
+                    <h1 class=" bg-orange-500 text-4xl font-bold text-white mb-4"> Notre mission</h1>
                     <p class="text-gray-600 text-lg mb-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tincidunt urna, 
                         vitae egestas risus pretium ac. Mauris auctor, tortor a consectetur cursus, augue enim laoreet lectus, 
@@ -73,7 +128,7 @@
                 
                 <!-- Texte -->
                 <div class="lg:w-1/2 lg:pl-12">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4">Pourquoi nous choisir ?</h1>
+                    <h1 class=" bg-orange-500 text-4xl font-bold text-white mb-4">Pourquoi nous choisir ?</h1>
                     <p class="text-gray-600 text-lg mb-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tincidunt urna, 
                         vitae egestas risus pretium ac. Mauris auctor, tortor a consectetur cursus, augue enim laoreet lectus, 
@@ -93,7 +148,7 @@
                 
                 <!-- Texte -->
                 <div class="lg:w-1/2 lg:pl-12">
-                    <h1 class="text-4xl font-bold text-gray-800 mb-4"> Nos valeurs</h1>
+                    <h1 class=" bg-orange-500 text-4xl  font-bold text-white mb-4"> Nos valeurs</h1>
                     <p class="text-gray-600 text-lg mb-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tincidunt urna, 
                         vitae egestas risus pretium ac. Mauris auctor, tortor a consectetur cursus, augue enim laoreet lectus, 
@@ -113,10 +168,39 @@
 
 
 
-            <br><br><br>
-
+           
         </div>
     </section>
+    <script>
+        const slider = document.getElementById('testimonial-slider');
+        let scrollAmount = 0;
+        
+        setInterval(() => {
+          scrollAmount += slider.offsetWidth;
+          if (scrollAmount >= slider.scrollWidth) {
+            scrollAmount = 0;
+          }
+          slider.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
+        }, 4000);
 
+
+       
+    // Toggle menu for small screens
+    const menuBtn = document.getElementById('menu-btn');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+
+    menuBtn.addEventListener('click', () => {
+      dropdownMenu.classList.toggle('hidden');
+    });
+
+
+
+    
+  
+  </script>    
+  <script src="js/script.JS"></script>
 </body>
 </html>
